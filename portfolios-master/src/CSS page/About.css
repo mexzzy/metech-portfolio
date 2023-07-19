@@ -1,0 +1,170 @@
+.aboutMain {
+  padding: 15px 0px;
+  overflow-wrap: break-word;
+}
+.aboutBox {
+  display: flex;
+  flex-wrap: wrap;
+  /* height: 100vh; */
+  padding: 10px;
+  overflow-wrap: break-word;
+}
+.move {
+  padding: 0 0 0 10px;
+}
+.parallax {
+  /* The image used */
+  background-image: linear-gradient(#000000bb, #000),
+    url(../images/parallax.jpg);
+  min-height: 200px;
+  background-attachment: fixed;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: cover;
+}
+.namingAbout {
+  display: flex;
+  padding: 15px;
+}
+.nameFlex {
+  display: flex;
+  margin-top: 80px;
+  flex-direction: column;
+}
+.namingAbout i {
+  color: royalblue;
+  font-size: 20px;
+}
+.namingAbout span {
+  color: inherit;
+  font-size: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.namingAbout p {
+  padding: 5px;
+  font-size: 13px;
+}
+.moreBtn {
+  display: none;
+}
+.devLanguage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 10px;
+}
+.devLanguage .title {
+  font-weight: 700;
+}
+.devLanguage .title::after {
+  content: "";
+  background-color: var(--icon);
+  width: 10px;
+  height: 3px;
+  padding: 0 20px;
+  border-radius: 5px;
+  display: block;
+}
+.devContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+}
+.devLanguage .lanContainer {
+  display: flex;
+  align-items: center;
+  /* gap: 10px; */
+  border-radius: 5px;
+  width: 20%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid var(--brc);
+}
+.devLanguage .lanContainer .html {
+  width: 50%;
+}
+.devLanguage .lanContainer .css {
+  width: 35%;
+}
+.devLanguage .lanContainer .js {
+  width: 55%;
+  border-radius: 5px;
+}
+.devLanguage .lanContainer .scss {
+  width: 40%;
+}
+.devLanguage .lanContainer .react {
+  border-radius: 5px;
+  width: 50%;
+}
+.devLanguage .lanContainer .typescript {
+  width: 50%;
+}
+.devLanguage .lanContainer .node {
+  width: 50%;
+}
+.devLanguage .lanContainer .tailwind {
+  border-radius: 5px;
+  width: 65%;
+}
+.devLanguage .lanContainer .boostrap {
+  border-radius: 5px;
+  width: 55%;
+}
+.ProjectAboutHolder{
+  display: flex;
+  align-items: center;
+  /* justify-content: last baseline; */
+  margin-top: 10px;
+  gap: 20px;
+}
+.projectLink{
+  padding: 15px;
+  background-color: var(--icon);
+  color: #fff;
+  text-transform: capitalize;
+  border-radius: 5px;
+  transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.projectLink:hover{
+  background-color: transparent;
+  border: 1px solid var(--brc);
+}
+@media (max-width: 768px) {
+.ProjectAboutHolder{
+  flex-direction: column;
+  justify-content: center;
+}
+.devLanguage .lanContainer {
+  justify-content: center;
+  width: 45%;
+}
+  .moreBtn {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--brc);
+    cursor: pointer;
+    text-transform: capitalize;
+    gap: 5px;
+    background-color: var(--bgc);
+  }
+  .aboutBox {
+    padding: 20px;
+    margin-bottom: 5%;
+  }
+  .nameFlex {
+    margin-top: 50px;
+  }
+  .namingAbout span {
+    font-size: 35px;
+  }
+}

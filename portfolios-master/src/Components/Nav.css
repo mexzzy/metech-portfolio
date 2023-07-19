@@ -1,0 +1,96 @@
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.mainNav {
+  width: fit-content;
+  height: fit-content;
+  object-fit: cover;
+  z-index: 5;
+  border-radius: 0 10px 0 10px;
+  border-top: 0;
+  border-right: 0;
+  border-left: 1px solid var(--brc);
+  border-bottom: 1px solid var(--brc);
+  background-color: var(--bgc);
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.navLinks {
+  font-size: 15px;
+  text-transform: capitalize;
+  color: inherit;
+  transition: 1s color cubic-bezier(0.075, 0.82, 0.165, 1);
+  display: flex;
+  padding: 10px;
+  justify-content: stretch;
+  /* align-items: center; */
+}
+.navLinks:hover {
+  color: #aaaaaa;
+}
+.navTitle {
+  text-transform: capitalize;
+  position: relative;
+  width: fit-content;
+  top: -40px;
+}
+.navTitle::after {
+  content: "";
+  height: 3px;
+  width: 80px;
+  top: -40px;
+  border-radius: 10px;
+  display: block;
+  background-color: var(--icon);
+}
+@media (max-width:768px) {
+  .mainNav {
+    position: fixed;
+    bottom: 0;
+    border-radius: 0px;
+    border: 0;
+    width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 90px;
+    backdrop-filter: blur(30px);
+    background-color: var(--bgc);
+    border-top: 1px solid var(--emColor);
+  }
+  .navLinks {
+    padding: 17px 0;
+  }
+  .navTitle {
+    position: static;
+    padding: 10px;
+  }
+  .navTitle::after {
+    right: 9px;
+  }
+  .navColor {
+    color: red;
+    font-size: 15px;
+    text-transform: capitalize;
+  }
+}
+@media (max-width: 768px) {
+  .navBars {
+    gap: 8px;
+  }
+  .navLinks {
+    font-size: 12px;
+  }
+  .icon{
+    display: none;
+  }
+  .isIcon{
+    display: block;
+  }
+}

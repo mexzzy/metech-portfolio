@@ -1,0 +1,115 @@
+.contactMain {
+  padding: 15px 0px;
+  overflow-wrap: break-word;
+}
+.contactBox {
+  padding: 0 15px;
+  overflow-wrap: break-word;
+}
+form {
+  display: block;
+}
+form::before {
+  content: "get in touch";
+  display: block;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 20px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+.formFlex {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--emColor);
+  text-transform: capitalize;
+  padding: 10px;
+  border-radius: 5px;
+  gap: 10px;
+  width: 100%;
+}
+.container span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+}
+.container span::after {
+  content: "";
+  /* -moz-fit-content:; */
+  width: fit-content;
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 5px;
+  transition: 0.2s ease;
+}
+.container:hover span::after {
+  background-color: var(--icon);
+}
+.container input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--icon);
+  color: white;
+  outline: none;
+  width: 100%;
+  transition: 0.2s ease;
+}
+.container input:placeholder-shown {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.318);
+}
+.container input::placeholder {
+  color: var(--emColor);
+}
+.container textarea {
+  background-color: transparent;
+  border: 1px dashed var(--brc);
+  resize: none;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+  outline: none;
+}
+form .formBtn {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form .formBtn button {
+  background-color: var(--icon);
+  color: white;
+  text-transform: capitalize;
+  padding: 20px 10%;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  border: 3px solid transparent;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+form .formBtn button:hover {
+  background-color: transparent;
+  border: 3px solid var(--emColor);
+}
+@media (max-width: 768px) {
+  .contactBox {
+    padding: 5% 20px;
+    height: 85vh;
+  }
+  .formFlex {
+    flex-direction: column;
+  }
+  form .formBtn button {
+    padding: 3% 10%;
+    margin-bottom: 30%;
+  }
+}

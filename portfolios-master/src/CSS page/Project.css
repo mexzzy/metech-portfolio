@@ -1,0 +1,103 @@
+.projectsMain {
+  padding: 15px 0px;
+  overflow-wrap: break-word;
+}
+.projectsBox {
+  padding: 0 15px;
+  overflow-wrap: break-word;
+}
+/*  */
+
+.allProject {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.projectContainer {
+  width: 270px;
+  background-color: rgb(4, 4, 4);
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 70px;
+  flex-direction: column;
+  transition: 0.2s ease;
+  /* box-shadow: 0px 0px 10px 2px #14161a54; */
+  border: 1px solid var(--brc);
+  border-radius: 10px;
+}
+.projectContainer:hover {
+  /* scale: 1.1; */
+  transform: scale(1.03);
+  box-shadow: 1px 1px 10px 0px #1717173a;
+}
+.projectContent {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.projectTitle {
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.language {
+  font-size: 10px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.description {
+  color: #666666cd;
+  font-size: 15px;
+}
+.projectIcon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.projectIcon .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--emColor);
+  transition: 0.5s ease;
+  padding: 10px;
+}
+
+.projectIcon .icon:hover i {
+  color: var(--icon);
+}
+.projectIcon a {
+  color: #fff;
+}
+.projectIcon i {
+  transition: 5ms ease;
+  font-size: 15px;
+}
+.projectIcon .txt {
+  color: #e2e2e2;
+  font-size: 13px;
+}
+@media (max-width: 768px) {
+  .projectsBox {
+    padding: 20px;
+    padding-bottom: 10%;
+  }
+  .allProject {
+    gap: 20px;
+    justify-content: center;
+  }
+  .projectContainer {
+    width: 100%;
+  }
+  .projectContainer:hover {
+    display: none;
+  }
+  .projectIcon i {
+    color: var(--icon);
+  }
+}

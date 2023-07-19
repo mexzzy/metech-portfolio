@@ -1,0 +1,15 @@
+.resumeMain{
+    padding: 15px 0px;
+    overflow-wrap: break-word;
+    /* word-break: break-all; */
+}
+.resumeBox{
+    padding: 0 15px;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 768px){
+    .resumeBox{
+        padding: 20px;
+    }
+}
