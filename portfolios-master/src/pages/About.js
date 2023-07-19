@@ -45,43 +45,48 @@ function AboutBox() {
   return (
     <>
       <div className="aboutParagraph">
-        Welcome to my portfolio! I'm a dedicated and enthusiastic software
-        developer with a strong foundation in creating robust and scalable
-        applications. My love for problem-solving and fascination with
-        technology have led me on an exciting journey in the world of coding.
-        <br />
-        <br />
-        With years of experience in the software development industry, I've had
-        the privilege of working on a wide range of projects, such as crafting
-        interactive web applications that power cutting-edge platforms.
-        <br />
-        {/* <br /> */}
-        My expertise lies in React and Typescript , and I'm constantly exploring
-        emerging technologies to stay at the forefront of innovation. I thrive
-        in dynamic environments that challenge me to push the boundaries of
-        what's possible.
-        <br />
-        <br />
-        Throughout this portfolio, you'll find a showcase of my latest projects,
-        highlighting my coding prowess, design sensibilities, and meticulous
-        attention to detail. Each project is a testament to my commitment to
-        delivering high-quality software solutions that meet user needs and
-        exceed expectations.
-        <br />
-        <br />
-        Collaboration is at the heart of my work, and I relish the opportunity
-        to work with diverse teams to bring ideas to life. I believe in creating
-        elegant and maintainable code that not only solves immediate challenges
-        but also lays the foundation for future growth and scalability. I'm
-        excited to connect with fellow developers, forward-thinking companies,
-        and anyone who shares a passion for leveraging technology to create
-        meaningful and impactful applications. Let's collaborate on the next big
-        thing!
-        <br />
-        <br />
-        Feel free to explore my projects and get in touch to discuss potential
-        opportunities or simply geek out about all things software development.
-        I'm looking forward to connecting with you!
+        <p>
+          Welcome to my portfolio! I'm a dedicated and enthusiastic software
+          developer with a strong foundation in creating robust and scalable
+          applications. My love for problem-solving and fascination with
+          technology have led me on an exciting journey in the world of coding.
+        </p>
+        <p>
+          With years of experience in the software development industry, I've
+          had the privilege of working on a wide range of projects, such as
+          crafting interactive web applications that power cutting-edge
+          platforms.
+          <br />
+          My expertise lies in React and Typescript , and I'm constantly
+          exploring emerging technologies to stay at the forefront of
+          innovation. I thrive in dynamic environments that challenge me to push
+          the boundaries of what's possible.
+        </p>
+
+        <p>
+          Throughout this portfolio, you'll find a showcase of my latest
+          projects, highlighting my coding prowess, design sensibilities, and
+          meticulous attention to detail. Each project is a testament to my
+          commitment to delivering high-quality software solutions that meet
+          user needs and exceed expectations.
+        </p>
+
+        <p>
+          Collaboration is at the heart of my work, and I relish the opportunity
+          to work with diverse teams to bring ideas to life. I believe in
+          creating elegant and maintainable code that not only solves immediate
+          challenges but also lays the foundation for future growth and
+          scalability. I'm excited to connect with fellow developers,
+          forward-thinking companies, and anyone who shares a passion for
+          leveraging technology to create meaningful and impactful applications.
+          Let's collaborate on the next big thing!
+        </p>
+
+        <p>
+          Feel free to explore my projects and get in touch to discuss potential
+          opportunities or simply geek out about all things software
+          development. I'm looking forward to connecting with you!
+        </p>
       </div>
 
       <Link to="/Contact" className="moreBtn">
