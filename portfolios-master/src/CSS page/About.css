@@ -47,7 +47,21 @@
   font-size: 13px;
 }
 .moreBtn {
-  display: none;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  cursor: pointer;
+  text-transform: capitalize;
+  gap: 5px;
+  color: #fff;
+  border: 1px solid var(--brc);
+  transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  background-color: var(--icon);
+}
+.moreBtn:hover{
+  background-color: transparent;
 }
 .devLanguage {
   display: flex;
@@ -144,18 +158,7 @@
   justify-content: center;
   width: 45%;
 }
-  .moreBtn {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 10px 0;
-    border: 1px solid var(--brc);
-    cursor: pointer;
-    text-transform: capitalize;
-    gap: 5px;
-    background-color: var(--bgc);
-  }
+ 
   .aboutBox {
     padding: 20px;
     margin-bottom: 5%;
