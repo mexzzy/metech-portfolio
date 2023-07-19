@@ -22,7 +22,7 @@ export default function About() {
             <span>
               samuel meshach<i className="fi fi-ss-badge-check"></i>
             </span>
-            <p className="emphasis">software developer </p>
+            <p className="emphasis">Software developer </p>
           </div>
         </div>
       </div>
