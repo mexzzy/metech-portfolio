@@ -120,7 +120,6 @@
 .ProjectAboutHolder{
   display: flex;
   align-items: center;
-  /* justify-content: last baseline; */
   margin-top: 10px;
   gap: 20px;
 }
