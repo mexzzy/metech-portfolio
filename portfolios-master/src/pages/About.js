@@ -11,6 +11,7 @@ import typescript from "../images/typescript.png";
 import node from "../images/node.png";
 import boostrap from "../images/Bootstrap.png";
 import tailwind from "../images/tailwind.jpg";
+import next from "../images/nextjs.jpg";
 
 export default function About() {
   return (
@@ -88,7 +89,7 @@ function AboutBox() {
         <span></span>
       </Link>
       <div className="devLanguage">
-        <span className="title">Languages</span>
+        <span className="title">Languages/Frameworks</span>
         <div className="devContainer">
           <div className="lanContainer">
             <span>
@@ -129,6 +130,12 @@ function AboutBox() {
               />
             </span>
             <span>typeScript</span>
+          </div>
+          <div className="lanContainer">
+            <span>
+              <img className="next" src={next} alt="language-icon" />
+            </span>
+            <span>next.js</span>
           </div>
           <div className="lanContainer">
             <span>

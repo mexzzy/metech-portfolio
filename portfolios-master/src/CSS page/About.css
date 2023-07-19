@@ -72,12 +72,12 @@
   gap: 10px;
 }
 .devLanguage .title {
-  font-weight: 700;
+  font-weight: 500;
 }
 .devLanguage .title::after {
   content: "";
   background-color: var(--icon);
-  width: 10px;
+  width: 100px;
   height: 3px;
   padding: 0 20px;
   border-radius: 5px;
@@ -118,6 +118,10 @@
   width: 50%;
 }
 .devLanguage .lanContainer .typescript {
+  width: 50%;
+}
+.devLanguage .lanContainer .next {
+  border-radius: 5px;
   width: 50%;
 }
 .devLanguage .lanContainer .node {

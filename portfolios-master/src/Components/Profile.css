@@ -234,7 +234,7 @@
     right: 0;
     height: 100vh;
     width: 100%;
-    background-color: rgba(8, 14, 31, 0.217);
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
