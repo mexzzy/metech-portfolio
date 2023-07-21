@@ -12,8 +12,10 @@ import node from "../images/node.png";
 import boostrap from "../images/Bootstrap.png";
 import tailwind from "../images/tailwind.jpg";
 import next from "../images/nextjs.jpg";
+import { useState } from "react";
 
 export default function About() {
+
   return (
     <div className="aboutMain">
       <span className="navTitle move">home</span>
@@ -41,7 +43,11 @@ export default function About() {
   );
 }
 
-function AboutBox() {
+function AboutBox( ) {
+  const [paragraph, setParagraph] = useState(false);
+  const paragraphBtn = () =>{
+    setParagraph(!paragraph);
+  }
   return (
     <>
       <div className="aboutParagraph">
@@ -62,36 +68,37 @@ function AboutBox() {
           innovation. I thrive in dynamic environments that challenge me to push
           the boundaries of what's possible.
         </p>
+        <div className="btnParagraph" onClick={paragraphBtn}>{paragraph ? "show less" : "show more"}</div>
+        <div className={`moreP ${paragraph ? "showPara" : "hidePara"}`}>
+          <p>
+            Throughout this portfolio, you'll find a showcase of my latest
+            projects, highlighting my coding prowess, design sensibilities, and
+            meticulous attention to detail. Each project is a testament to my
+            commitment to delivering high-quality software solutions that meet
+            user needs and exceed expectations.
+          </p>
 
-        <p>
-          Throughout this portfolio, you'll find a showcase of my latest
-          projects, highlighting my coding prowess, design sensibilities, and
-          meticulous attention to detail. Each project is a testament to my
-          commitment to delivering high-quality software solutions that meet
-          user needs and exceed expectations.
-        </p>
+          <p>
+            Collaboration is at the heart of my work, and I relish the
+            opportunity to work with diverse teams to bring ideas to life. I
+            believe in creating elegant and maintainable code that not only
+            solves immediate challenges but also lays the foundation for future
+            growth and scalability. I'm excited to connect with fellow
+            developers, forward-thinking companies, and anyone who shares a
+            passion for leveraging technology to create meaningful and impactful
+            applications. Let's collaborate on the next big thing!
+          </p>
 
-        <p>
-          Collaboration is at the heart of my work, and I relish the opportunity
-          to work with diverse teams to bring ideas to life. I believe in
-          creating elegant and maintainable code that not only solves immediate
-          challenges but also lays the foundation for future growth and
-          scalability. I'm excited to connect with fellow developers,
-          forward-thinking companies, and anyone who shares a passion for
-          leveraging technology to create meaningful and impactful applications.
-          Let's collaborate on the next big thing!
-        </p>
-
-        <p>
-          Feel free to explore my projects and get in touch to discuss potential
-          opportunities or simply geek out about all things software
-          development. I'm looking forward to connecting with you!
-        </p>
+          <p>
+            Feel free to explore my projects and get in touch to discuss
+            potential opportunities or simply geek out about all things software
+            development. I'm looking forward to connecting with you!
+          </p>
+        </div>
       </div>
 
       <Link to="/Contact" className="moreBtn">
         <span>get in touch</span>
-        <span></span>
       </Link>
       <div className="devLanguage">
         <span className="title">Languages/Frameworks</span>
@@ -165,4 +172,3 @@ function AboutBox() {
     </>
   );
 }
-// export default Box;

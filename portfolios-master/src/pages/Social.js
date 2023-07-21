@@ -17,23 +17,23 @@ function Social() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i class="fi fi-brands-github"></i>
+            <i className="fi fi-brands-github"></i>
           </a>
           <a
             className="socialLink"
-            href="/"
+            href="/v"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i class="fi fi-brands-linkedin"></i>
+            <i className="fi fi-brands-linkedin"></i>
           </a>
           <a
             className="socialLink"
-            href="/"
+            href="/v"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i class="fi fi-brands-twitter"></i>
+            <i className="fi fi-brands-twitter"></i>
           </a>
           <a
             className="socialLink"
@@ -41,12 +41,12 @@ function Social() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i class="fi fi-brands-instagram"></i>
+            <i className="fi fi-brands-instagram"></i>
           </a>
         </div>
         <div className="socialBtnContainer" onClick={socialButton}>
-          <i className="fi fi-rr-angle-small-up"></i>
-          <i className="fi fi-sr-globe"></i>
+          <i className={`fi fi-rr-angle-small-up  ${social ? "activeRotate" : "deactivateRotate"}`}></i>
+          <i className={`fi fi-sr-globe ${social ? "activeRotateGlobe" : "deactivateRotateGlobe"}`}></i>
         </div>
       </main>
     </>

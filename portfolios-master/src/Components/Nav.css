@@ -48,7 +48,10 @@
   display: block;
   background-color: var(--icon);
 }
-@media (max-width:768px) {
+.navLinks i {
+  display: none;
+}
+@media (max-width: 768px) {
   .mainNav {
     position: fixed;
     bottom: 0;
@@ -60,12 +63,12 @@
     justify-content: space-evenly;
     align-items: center;
     font-size: 90px;
-    backdrop-filter: blur(30px);
-    background-color: var(--bgc);
-    border-top: 1px solid var(--emColor);
+    background-color: rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(50px);
+    border-top: 1px solid var(--brc);
   }
   .navLinks {
-    padding: 17px 0;
+    padding: 10px 0;
   }
   .navTitle {
     position: static;
@@ -74,23 +77,27 @@
   .navTitle::after {
     right: 9px;
   }
-  .navColor {
-    color: red;
-    font-size: 15px;
-    text-transform: capitalize;
-  }
-}
-@media (max-width: 768px) {
-  .navBars {
-    gap: 8px;
-  }
+
   .navLinks {
-    font-size: 12px;
+    /* font-size: 12px; */
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  .icon{
+  .navLinks i {
+    display: block;
+    font-size: 16px;
+  }
+  .navLinks span {
+    font-size: 10px;
+    color: #aaaaaa;
+  }
+  .icon {
     display: none;
   }
-  .isIcon{
+  .isIcon {
     display: block;
   }
 }

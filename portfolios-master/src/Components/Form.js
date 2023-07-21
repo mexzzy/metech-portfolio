@@ -1,4 +1,4 @@
-import "../CSS page/Contact.css"
+import "../CSS page/Contact.css";
 const Form = () => {
   return (
     <>
@@ -25,6 +25,7 @@ const Form = () => {
             rows="10"
           ></textarea>
         </div>
+
         <div className="formBtn">
           <button>send</button>
         </div>

@@ -1,10 +1,17 @@
+import { useState } from "react";
 import "../CSS page/Resume.css";
 import profilePic from "../images/logo.jpg";
 
 export default function Resume() {
+  const [detail, setDetail] = useState(false);
+  const detailBtn = () => {
+    setDetail(!detail);
+  };
   return (
     <div className="resumeMain">
-      <span className="navTitle move">resume</span>
+      <span className="navTitle move">resum&eacute;</span>
+      <i className="fi fi-sr-caret-down detailIcon" onClick={detailBtn}></i>
+
       <div className="resumeBox">
         <div className="resumeContainer">
           <div className="resumeR">
@@ -19,24 +26,24 @@ export default function Resume() {
               </div>
             </div>
             <div className="resumeTitle">
-              <i class="fi fi-ss-user"></i>
+              <i className="fi fi-ss-user"></i>
               <span>profile</span>
             </div>
             <div className="resumeWriteUp">
               <div className="words">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-                adipisci at necessitatibus harum. Vitae ea quidem esse beatae
-                voluptate dolor praesentium. Fuga molestias quis pariatur
-                delectus? Voluptates molestias provident fugiat?
+                Highly motivated and detail-oriented software developer with a
+                strong background in web development seeking a frontend position
+                at a functioning tech Company. Skilled in JavaScript, React and
+                typescript, with a passion for creating innovative and
+                user-friendly web applications.
               </div>
             </div>
             <br />
             <div className="resumeTitle">
-              <i class="fi fi-ss-shopping-bag"></i>
+              <i className="fi fi-ss-shopping-bag"></i>
               <span>experience/employment history</span>
             </div>
             <div className="resumeWriteUp">
-              {/* <i class="fi fi-sr-caret-down"></i> */}
               <div>
                 <div className="workTitle">
                   frontend developer at Google, united kingdom
@@ -152,34 +159,42 @@ export default function Resume() {
               </div>
             </div>
           </div>
-          <div className="resumeL">
-            <div className="resumeTitle">details</div>
-            <div className="addressAndNumber">
-              Ikeja Lagos, Nigeria.
-              <br />
-              09038201903
-            </div>
-            <div className="detailFlex">
-              <div className="box1">
-                <div className="detailTitle">date/place of birth</div>
-                <div className="addressAndNumber">
-                  08-10-2005
-                  <br />
-                  Osun state
+          <div className={`resumeL ${detail ? "showDetail" : "hideDetail"}`}>
+            <div
+              class="detailIconCancel"
+              onClick={detailBtn}
+            > Close </div>
+            <div className="leftContainer">
+              <div className="resumeTitle">details</div>
+              <div className="addressAndNumber">
+                Ikeja Lagos, Nigeria.
+                <br />
+                09038201903
+              </div>
+              <div className="detailFlex">
+                <div className="box1">
+                  <div className="detailTitle">date/place of birth</div>
+                  <div className="addressAndNumber">
+                    08-10-2005
+                    <br />
+                    Osun State
+                  </div>
                 </div>
-              </div>
-              <div className="box2">
-                <div className="detailTitle">nationality</div>
-                <div className="addressAndNumber">NIGERIAN</div>
-              </div>
-              <div className="box3">
-                <div className="detailTitle">specialize field</div>
-                <div className="addressAndNumber">Frontend development</div>
+                <div className="box2">
+                  <div className="detailTitle">nationality</div>
+                  <div className="addressAndNumber">Nigerian</div>
+                </div>
+                <div className="box3">
+                  <div className="detailTitle">specialize field</div>
+                  <div className="addressAndNumber">Frontend Development</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <br />
+      <br />
     </div>
   );
 }

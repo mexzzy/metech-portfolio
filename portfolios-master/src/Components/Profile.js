@@ -4,8 +4,12 @@ import React, { useState, useEffect } from "react";
 
 function Profile() {
   const [open, setOpen] = useState(false);
+  const [openPic, setOpenPic] = useState(false);
   const handler = () => {
     setOpen(!open);
+  };
+  const picBtn = () => {
+    setOpenPic(!openPic);
   };
 
   useEffect(() => {
@@ -44,10 +48,24 @@ function Profile() {
   ));
   return (
     <div>
+      {openPic && (
+        <div className="profilePicViewContainer">
+          <div className="profilePicView">
+            <img src={logo} alt="logo" className="profilePicViewer" />
+            <div className="closeProfilePicV" onClick={picBtn}>
+              Close
+            </div>
+          </div>
+        </div>
+      )}
       <main className="profileMain">
         <div className="flex">
           <div className="flexHolder">
-            <div className="profilePicture">
+            <div
+              className="profilePicture"
+              title="view profile picture"
+              onClick={() => setOpenPic(true)}
+            >
               <img src={logo} alt="logo" className="profilePic" />
             </div>
             <div className="profileValues">

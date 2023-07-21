@@ -29,8 +29,7 @@
   border-radius: 10px;
 }
 .projectContainer:hover {
-  /* scale: 1.1; */
-  transform: scale(1.03);
+  scale: 1.02;
   box-shadow: 1px 1px 10px 0px #1717173a;
 }
 .projectContent {
@@ -90,12 +89,13 @@
   .allProject {
     gap: 20px;
     justify-content: center;
+    margin-bottom: 20px;
   }
   .projectContainer {
     width: 100%;
   }
   .projectContainer:hover {
-    display: none;
+    scale: normal;
   }
   .projectIcon i {
     color: var(--icon);

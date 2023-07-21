@@ -59,13 +59,18 @@
     flex-direction: column;
     position: fixed;
     right: 4%;
-    bottom: 8%;
+    bottom: 12%;
     height: auto;
     width: auto;
-    border: 1px solid var(--brc);
+    border: .5px solid #b3b3b373;
     background-color: var(--bgc);
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
+    opacity: .6;
+    z-index: 3;
+  }
+  .socialMain:hover{
+    opacity: 1;
   }
   .socialLink{
     padding: 0 3px;
