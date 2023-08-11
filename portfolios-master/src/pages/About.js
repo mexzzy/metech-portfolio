@@ -68,7 +68,6 @@ function AboutBox( ) {
           innovation. I thrive in dynamic environments that challenge me to push
           the boundaries of what's possible.
         </p>
-        <div className="btnParagraph" onClick={paragraphBtn}>{paragraph ? "show less" : "show more"}</div>
         <div className={`moreP ${paragraph ? "showPara" : "hidePara"}`}>
           <p>
             Throughout this portfolio, you'll find a showcase of my latest
@@ -95,6 +94,8 @@ function AboutBox( ) {
             development. I'm looking forward to connecting with you!
           </p>
         </div>
+        <div className="btnParagraph" onClick={paragraphBtn}>{paragraph ? "show less" : "show more"}</div>
+
       </div>
 
       <Link to="/Contact" className="moreBtn">

@@ -7,23 +7,23 @@ function Nav() {
   return (
     <main className="mainNav">
       <Link className="navLinks" to="/">
-        <i className="fi fi-sr-house-window"></i>
+      <i class="fi fi-br-house-blank"></i>
         <span>home</span>
       </Link>
       <Link className="navLinks" to="/Projects">
-        <i className="fi fi-sr-edit-alt"></i>
+      <i class="fi fi-bs-code-simple"></i>
         <span>
           project
         </span>
       </Link>
       <Link className="navLinks" to="/Resume">
-        <i className="fi fi-sr-document"></i>
+      <i class="fi fi-bs-document"></i>
         <span>
           resum&eacute;
         </span>
       </Link>
       <Link className="navLinks" to="/Contact">
-        <i className="fi fi-sr-square-phone-hangup"></i>
+      <i class="fi fi-bs-at"></i>
         <span >
           contact
         </span>
