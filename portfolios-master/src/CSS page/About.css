@@ -86,8 +86,8 @@
 }
 .devLanguage .title::after {
   content: "";
-  background-color: var(--icon);
-  width: 100px;
+  background-image: linear-gradient(90deg, var(--icon), transparent);
+  width: 120px;
   height: 3px;
   padding: 0 20px;
   border-radius: 5px;
@@ -112,13 +112,13 @@
   border: 1px solid var(--brc);
 }
 .devLanguage .lanContainer .html {
-  width: 50%;
+  width: 45%;
 }
 .devLanguage .lanContainer .css {
   width: 35%;
 }
 .devLanguage .lanContainer .js {
-  width: 55%;
+  width: 50%;
   border-radius: 5px;
 }
 .devLanguage .lanContainer .scss {
@@ -133,10 +133,7 @@
 }
 .devLanguage .lanContainer .next {
   border-radius: 5px;
-  width: 50%;
-}
-.devLanguage .lanContainer .node {
-  width: 50%;
+  width: 40%;
 }
 .devLanguage .lanContainer .tailwind {
   border-radius: 5px;
@@ -144,7 +141,7 @@
 }
 .devLanguage .lanContainer .boostrap {
   border-radius: 5px;
-  width: 55%;
+  width: 50%;
 }
 .ProjectAboutHolder {
   display: flex;

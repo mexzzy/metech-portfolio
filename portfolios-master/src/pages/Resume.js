@@ -10,7 +10,10 @@ export default function Resume() {
   return (
     <div className="resumeMain">
       <span className="navTitle move">resum&eacute;</span>
-      <i className="fi fi-sr-caret-down detailIcon" onClick={detailBtn}></i>
+      <div className="detailIcon" onClick={detailBtn}>
+        <span>More</span>
+        <i className="fi fi-rr-angle-small-down" onClick={detailBtn}></i>
+      </div>
 
       <div className="resumeBox">
         <div className="resumeContainer">
@@ -82,7 +85,6 @@ export default function Resume() {
             </div>
             {/* work  */}
             <div className="resumeWriteUp">
-              {/* <i class="fi fi-sr-caret-down"></i> */}
               <div>
                 <div className="workTitle">
                   frontend developer at Google, united kingdom
@@ -121,7 +123,6 @@ export default function Resume() {
             </div>
             {/* work */}
             <div className="resumeWriteUp">
-              {/* <i class="fi fi-sr-caret-down"></i> */}
               <div>
                 <div className="workTitle">
                   frontend developer at Google, united kingdom
@@ -160,10 +161,9 @@ export default function Resume() {
             </div>
           </div>
           <div className={`resumeL ${detail ? "showDetail" : "hideDetail"}`}>
-            <div
-              class="detailIconCancel"
-              onClick={detailBtn}
-            > Close </div>
+            <div className="detailIconCancel" onClick={detailBtn}>
+              Close
+            </div>
             <div className="leftContainer">
               <div className="resumeTitle">details</div>
               <div className="addressAndNumber">

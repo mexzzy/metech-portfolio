@@ -126,29 +126,36 @@
     padding: 10px 20px;
   }
   .hideDetail {
-    /* display: none; */
     transform: translate(0, -50px);
     transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);
     opacity: 0;
     pointer-events: none;
   }
   .showDetail {
-    /* display: block; */
     transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);
     transform: translate(0, 0);
     opacity: 1;
   }
   .detailIcon {
-    display: block;
+    display: flex;
     border: 1px solid var(--brc);
-    padding: 6px 6px 3px 6px;
     border-radius: 30px;
+    padding: 0 10px;
     width: fit-content;
     position: absolute;
     right: 5%;
-    top: 80px;
+    top: 90px;
     cursor: pointer;
-    background-color: var(--icon);
+    background-color: var(--brc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .detailIcon span{
+    font-size: 13px;
+  }
+  .detailIcon i{
+    padding: 5px 0 0 0  ;
   }
   .detailIconCancel {
     display: block;
@@ -157,7 +164,6 @@
     border-radius: 20px;
     width: fit-content;
     position: relative;
-    /* right: -1%/10%; */
     float: right;
     top: 0px;
     cursor: pointer;

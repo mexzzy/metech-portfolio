@@ -54,8 +54,9 @@
 .projectIcon {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
 }
 .projectIcon .icon {
   display: flex;
@@ -65,6 +66,9 @@
   background-color: var(--emColor);
   transition: 0.5s ease;
   padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--brc);
+  transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .projectIcon .icon:hover i {
@@ -72,6 +76,7 @@
 }
 .projectIcon a {
   color: #fff;
+  width: 100%;
 }
 .projectIcon i {
   transition: 5ms ease;
@@ -99,5 +104,9 @@
   }
   .projectIcon i {
     color: var(--icon);
+  }
+  .projectIcon .icon:hover{
+    border: 1px solid #847b7b;
+    scale: 1.02;
   }
 }

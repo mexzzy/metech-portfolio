@@ -30,9 +30,6 @@
   justify-content: stretch;
   /* align-items: center; */
 }
-.navLinks:hover {
-  color: #aaaaaa;
-}
 .navTitle {
   text-transform: capitalize;
   position: relative;
@@ -50,6 +47,9 @@
 }
 .navLinks i {
   display: none;
+}
+.active{
+  color: var(--icon);
 }
 @media (max-width: 768px) {
   .mainNav {

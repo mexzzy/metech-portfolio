@@ -8,7 +8,6 @@ import scss from "../images/scss.png";
 import js from "../images/js.jpg";
 import react from "../images/react.jpg";
 import typescript from "../images/typescript.png";
-import node from "../images/node.png";
 import boostrap from "../images/Bootstrap.png";
 import tailwind from "../images/tailwind.jpg";
 import next from "../images/nextjs.jpg";
@@ -25,7 +24,7 @@ export default function About() {
             <span>
               samuel meshach<i className="fi fi-ss-badge-check"></i>
             </span>
-            <p className="emphasis">Software developer </p>
+            <p className="emphasis">SOFTWARE DEVELOPER </p>
           </div>
         </div>
       </div>
@@ -130,6 +129,18 @@ function AboutBox( ) {
           </div>
           <div className="lanContainer">
             <span>
+              <img className="tailwind" src={tailwind} alt="language-icon" />
+            </span>
+            <span>tailwind</span>
+          </div>
+          <div className="lanContainer">
+            <span>
+              <img className="boostrap" src={boostrap} alt="language-icon" />
+            </span>
+            <span>boostrap</span>
+          </div>
+          <div className="lanContainer">
+            <span>
               <img className="react" src={react} alt="language-icon" />
             </span>
             <span>react.js</span>
@@ -149,24 +160,6 @@ function AboutBox( ) {
               <img className="next" src={next} alt="language-icon" />
             </span>
             <span>next.js</span>
-          </div>
-          <div className="lanContainer">
-            <span>
-              <img className="node" src={node} alt="language-icon" />
-            </span>
-            <span>node.js</span>
-          </div>
-          <div className="lanContainer">
-            <span>
-              <img className="tailwind" src={tailwind} alt="language-icon" />
-            </span>
-            <span>tailwind</span>
-          </div>
-          <div className="lanContainer">
-            <span>
-              <img className="boostrap" src={boostrap} alt="language-icon" />
-            </span>
-            <span>boostrap</span>
           </div>
         </div>
       </div>

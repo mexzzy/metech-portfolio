@@ -25,7 +25,7 @@ function Profile() {
       id: 1,
     },
     {
-      job: " node.js",
+      job: "next.js",
       id: 2,
     },
     {

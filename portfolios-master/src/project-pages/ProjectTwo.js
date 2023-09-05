@@ -21,13 +21,13 @@ function ProjectTwo() {
         <div className="projectIcon">
           <a href="/" target="_blank" rel="noopener noreferrer">
             <span className="icon">
-              <i class="fi fi-br-eye"></i>
+              <i className="fi fi-br-eye"></i>
               <span className="txt">view</span>
             </span>
           </a>
           <a href="/" target="_blank" rel="noopener noreferrer">
             <span className="icon">
-              <i class="fi fi-tr-code-branch"></i>
+              <i className="fi fi-tr-code-branch"></i>
               <span className="txt">code</span>
             </span>
           </a>
