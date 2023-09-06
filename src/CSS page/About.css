@@ -104,44 +104,17 @@
 .devLanguage .lanContainer {
   display: flex;
   align-items: center;
-  /* gap: 10px; */
+  gap: 10px;
   border-radius: 5px;
-  width: 20%;
   padding: 10px;
   font-size: 14px;
   border: 1px solid var(--brc);
 }
-.devLanguage .lanContainer .html {
-  width: 45%;
-}
-.devLanguage .lanContainer .css {
-  width: 35%;
-}
-.devLanguage .lanContainer .js {
-  width: 50%;
+.devLanguage .lanContainer img {
+  width: 40px;
+  height: 40px;
   border-radius: 5px;
-}
-.devLanguage .lanContainer .scss {
-  width: 40%;
-}
-.devLanguage .lanContainer .react {
-  border-radius: 5px;
-  width: 50%;
-}
-.devLanguage .lanContainer .typescript {
-  width: 50%;
-}
-.devLanguage .lanContainer .next {
-  border-radius: 5px;
-  width: 40%;
-}
-.devLanguage .lanContainer .tailwind {
-  border-radius: 5px;
-  width: 65%;
-}
-.devLanguage .lanContainer .boostrap {
-  border-radius: 5px;
-  width: 50%;
+  object-fit: cover;
 }
 .ProjectAboutHolder {
   display: flex;
@@ -193,24 +166,24 @@
   .showPara {
     display: flex;
   }
-  .activeRotate{
+  .activeRotate {
     color: #2f53c0;
-   transform: rotate(180deg);
-   transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
-  .deactivateRotate{
-   transform: rotate(0deg);
-   transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
-  .activeRotateGlobe{
     transform: rotate(180deg);
-    transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
-  .deactivateRotateGlobe{
+  .deactivateRotate {
     transform: rotate(0deg);
-    transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
-   }
-  .projectLink{
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .activeRotateGlobe {
+    transform: rotate(180deg);
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .deactivateRotateGlobe {
+    transform: rotate(0deg);
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .projectLink {
     margin-bottom: 20px;
   }
 }

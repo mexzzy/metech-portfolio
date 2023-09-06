@@ -7,29 +7,27 @@ function ProjectFour() {
       <div className="projectContainer">
         {/* content */}
         <div className="projectContent">
-          <span className="projectTitle">name of the project</span>
+          <span className="projectTitle">schooly</span>
           <span className="language">
-          
-            <span className="emphasis">react</span>
+            <span className="emphasis">html</span>
             <span className="emphasis">css</span>
+            <span className="emphasis">js</span>
           </span>
           <span className="description">
-            description goes here, means just a short write up about the project
-            will be written here
+            Offers the best educational services for you and for the advancement
+            of your career.
           </span>
         </div>
         {/* icon */}
         <div className="projectIcon">
-          <a href="/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="http://Schoolyweb.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span className="icon">
               <i className="fi fi-br-eye"></i>
               <span className="txt">view</span>
-            </span>
-          </a>
-          <a href="/" target="_blank" rel="noopener noreferrer">
-            <span className="icon">
-              <i className="fi fi-tr-code-branch"></i>
-              <span className="txt">code</span>
             </span>
           </a>
         </div>

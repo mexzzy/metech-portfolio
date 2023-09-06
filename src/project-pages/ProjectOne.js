@@ -12,7 +12,7 @@ function ProjectOne() {
             <span className="emphasis">styled-components</span>
           </span>
           <span className="description">
-            Weather Update is a weather broadcast search engine for countries, states and cities
+            Weather Update is a weather broadcast search engine for countries, states and cities.
           </span>
         </div>
         {/* icon */}
