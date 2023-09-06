@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../CSS page/Resume.css";
 import profilePic from "../images/logo.jpg";
-import { Fade, Slide, Bounce, Zoom } from "react-awesome-reveal";
+import { Slide, Bounce, Zoom } from "react-awesome-reveal";
 
 export default function Resume() {
   const [detail, setDetail] = useState(false);
@@ -38,7 +38,7 @@ export default function Resume() {
               <i className="fi fi-ss-user"></i>
               <span>profile</span>
             </div>
-            <Fade>
+            <Slide>
               <div className="resumeWriteUp">
                 <div className="words">
                   Highly motivated and detail-oriented software developer with a
@@ -48,7 +48,7 @@ export default function Resume() {
                   and user-friendly web applications.
                 </div>
               </div>
-            </Fade>
+            </Slide>
             <br />
             <div className="resumeTitle">
               <i className="fi fi-ss-shopping-bag"></i>
@@ -57,43 +57,33 @@ export default function Resume() {
             <div className="resumeWriteUp">
               <Zoom>
                 <div>
-                  <div className="workTitle">
-                    frontend developer at Google, united kingdom
-                  </div>
-                  <div className="workDate">january 2023 - march 2023</div>
+                  <div className="workTitle">weather update [project]</div>
+                  <div className="workDate">august 2023 </div>
                 </div>
               </Zoom>
-              <Fade>
+              <Slide>
                 <div>
                   <div className="words">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Commodi officia quaerat, accusantium dignissimos repellendus
-                    exercitationem molestias dolores. Qui, alias quod.
+                    weather update was published august 2023, it's designed to
+                    display current weather updates of any country using the
+                    search engine functionality, here are what was implemented:
                     <ul>
                       <li>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Accusantium deserunt amet quas quia reprehenderit
-                        voluptatibus?
+                        Created using create-react-app, styled with
+                        styled-components.
                       </li>
                       <li>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Accusantium deserunt amet quas quia reprehenderit
-                        voluptatibus?
+                        Openweather API was used to fetch all country current
+                        weather data.
                       </li>
                       <li>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Accusantium deserunt amet quas quia reprehenderit
-                        voluptatibus?
-                      </li>
-                      <li>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Accusantium deserunt amet quas quia reprehenderit
-                        voluptatibus?
+                        Libraries such as react-icons, react-spinner,
+                        react-toastify, react-feather, styled-components, axios.
                       </li>
                     </ul>
                   </div>
                 </div>
-              </Fade>
+              </Slide>
             </div>
             {/* work  */}
             <div className="resumeWriteUp">
@@ -105,7 +95,7 @@ export default function Resume() {
                   <div className="workDate">january 2023 - march 2023</div>
                 </div>
               </Zoom>
-              <Fade>
+              <Slide>
                 <div>
                   <div className="words">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -135,7 +125,7 @@ export default function Resume() {
                     </ul>
                   </div>
                 </div>
-              </Fade>
+              </Slide>
             </div>
             {/* work */}
             <div className="resumeWriteUp">
@@ -148,7 +138,7 @@ export default function Resume() {
                 </div>
               </Zoom>
               <div>
-                <Fade>
+                <Slide>
                   <div className="words">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Commodi officia quaerat, accusantium dignissimos repellendus
@@ -176,7 +166,7 @@ export default function Resume() {
                       </li>
                     </ul>
                   </div>
-                </Fade>
+                </Slide>
               </div>
             </div>
           </div>

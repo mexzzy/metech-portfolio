@@ -17,8 +17,8 @@ import { Fade, Slide, Zoom, Bounce } from "react-awesome-reveal";
 export default function About() {
   return (
     <div className="aboutMain">
-    <Slide>
-      <span className="navTitle move">home</span>
+      <Slide>
+        <span className="navTitle move">home</span>
       </Slide>
       <div className="parallax">
         <div className="namingAbout">
@@ -109,81 +109,87 @@ function AboutBox() {
         </div>
       </Fade>
 
-        <Link to="/Contact" className="moreBtn">
-          <span>get in touch</span>
-        </Link>
+      <Link to="/Contact" className="moreBtn">
+        <span>get in touch</span>
+      </Link>
       <div className="devLanguage">
-        <Zoom>
-          <span className="title">Languages/Frameworks</span>
-          <div className="devContainer">
+        {/* <Zoom> */}
+        <span className="title">Languages/Frameworks</span>
+        <div className="devContainer">
+          <Bounce>
             <div className="lanContainer">
               <span>
-                <img className="html" src={html} alt="language-icon" />
+                <img src={html} alt="language-icon" />
               </span>
               <span>html</span>
             </div>
-
-            <div className="lanContainer">
-              <span>
-                <img className="css" src={css} alt="language-icon" />
-              </span>
-              <span>css</span>
-            </div>
-
-            <div className="lanContainer">
-              <span>
-                <img className="js" src={js} alt="language-icon" />
-              </span>
-              <span>javascript</span>
-            </div>
-
-            <div className="lanContainer">
-              <span>
-                <img className="scss" src={scss} alt="language-icon" />
-              </span>
-              <span>scss</span>
-            </div>
-
-            <div className="lanContainer">
-              <span>
-                <img className="tailwind" src={tailwind} alt="language-icon" />
-              </span>
-              <span>tailwind</span>
-            </div>
-
-            <div className="lanContainer">
-              <span>
-                <img className="boostrap" src={boostrap} alt="language-icon" />
-              </span>
-              <span>boostrap</span>
-            </div>
-
-            <div className="lanContainer">
-              <span>
-                <img className="react" src={react} alt="language-icon" />
-              </span>
-              <span>react.js</span>
-            </div>
-
-            <div className="lanContainer">
-              <span>
-                <img
-                  className="typescript"
-                  src={typescript}
-                  alt="language-icon"
-                />
-              </span>
-              <span>typeScript</span>
-            </div>
-
-            <div className="lanContainer">
-              <span>
-                <img className="next" src={next} alt="language-icon" />
-              </span>
-              <span>next.js</span>
-            </div>
+          </Bounce>
+          <Bounce>
+          <div className="lanContainer">
+            <span>
+              <img src={css} alt="language-icon" />
+            </span>
+            <span>css</span>
           </div>
-        </Zoom>
+          </Bounce>
+<Bounce>
+          <div className="lanContainer">
+            <span>
+              <img src={js} alt="language-icon" />
+            </span>
+            <span>javascript</span>
+          </div>
+          </Bounce>
+<Bounce>
+          <div className="lanContainer">
+            <span>
+              <img src={scss} alt="language-icon" />
+            </span>
+            <span>scss</span>
+          </div>
+          </Bounce>
+<Bounce>
+          <div className="lanContainer">
+            <span>
+              <img src={tailwind} alt="language-icon" />
+            </span>
+            <span>tailwind</span>
+          </div>
+          </Bounce>
+<Bounce>
+          <div className="lanContainer">
+            <span>
+              <img src={boostrap} alt="language-icon" />
+            </span>
+            <span>boostrap</span>
+          </div>
+          </Bounce>
+          <Bounce>
+          <div className="lanContainer">
+            <span>
+              <img src={react} alt="language-icon" />
+            </span>
+            <span>react.js</span>
+          </div>
+          </Bounce>
+<Bounce>
+          <div className="lanContainer">
+            <span>
+              <img src={typescript} alt="language-icon" />
+            </span>
+            <span>typeScript</span>
+          </div>
+          </Bounce>
+          <Bounce>
+          <div className="lanContainer">
+            <span>
+              <img src={next} alt="language-icon" />
+            </span>
+            <span>next.js</span>
+          </div>
+          </Bounce>
+        </div>
+        {/* </Zoom> */}
       </div>
     </>
   );
