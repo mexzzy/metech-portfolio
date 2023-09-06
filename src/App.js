@@ -12,25 +12,25 @@ import Page404 from "./pages/Page404";
 
 function App() {
   return (
-    <div className="App">
-      <div className="column">
-        <Profile />
-        <Social />
-      </div>
-      <div className="displayMain">
-        <div className="space">
-          <div></div>
-          <Nav />
+      <div className="App">
+        <div className="column">
+          <Profile />
+          <Social />
         </div>
-        <Routes>
-          <Route path="/" element={<About />}></Route>
-          <Route path="/Projects" element={<Projects />}></Route>
-          <Route path="/Resume" element={<Resume />}></Route>
-          <Route path="/Contact" element={<Contact />}></Route>
-          <Route path="*" element={<Page404 />}></Route>
-        </Routes>
+        <div className="displayMain">
+          <div className="space">
+            <div></div>
+            <Nav />
+          </div>
+          <Routes>
+            <Route path="/" element={<About />}></Route>
+            <Route path="/Projects" element={<Projects />}></Route>
+            <Route path="/Resume" element={<Resume />}></Route>
+            <Route path="/Contact" element={<Contact />}></Route>
+            <Route path="*" element={<Page404 />}></Route>
+          </Routes>
+        </div>
       </div>
-    </div>
   );
 }
 
