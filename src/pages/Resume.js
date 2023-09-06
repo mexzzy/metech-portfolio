@@ -77,6 +77,10 @@ export default function Resume() {
                         weather data.
                       </li>
                       <li>
+                        ipinfo API was used to fetch user current location to
+                        display current weather broadcast.
+                      </li>
+                      <li>
                         Libraries such as react-icons, react-spinner,
                         react-toastify, react-feather, styled-components, axios.
                       </li>
