@@ -12,156 +12,178 @@ import boostrap from "../images/Bootstrap.png";
 import tailwind from "../images/tailwind.jpg";
 import next from "../images/nextjs.jpg";
 import { useState } from "react";
+import { Fade, Slide, Zoom, Bounce } from "react-awesome-reveal";
 
 export default function About() {
-
   return (
     <div className="aboutMain">
+    <Slide>
       <span className="navTitle move">home</span>
+      </Slide>
       <div className="parallax">
         <div className="namingAbout">
           <div className="nameFlex">
-            <span>
-              samuel meshach<i className="fi fi-ss-badge-check"></i>
-            </span>
-            <p className="emphasis">SOFTWARE DEVELOPER </p>
+            <Slide direction="up">
+              <span>
+                samuel meshach<i className="fi fi-ss-badge-check"></i>
+              </span>
+              <p className="emphasis">SOFTWARE DEVELOPER </p>
+            </Slide>
           </div>
         </div>
       </div>
       <div className="aboutBox">
         <AboutBox />
         <div className="ProjectAboutHolder">
-          <ProjectOne />
-          <ProjectTwo />
-          <Link to="/Projects" className="projectLink">
-            more projects
-          </Link>
+          <Zoom>
+            <ProjectOne />
+            <ProjectTwo />
+          </Zoom>
+          <Bounce>
+            <Link to="/Projects" className="projectLink">
+              more projects
+            </Link>
+          </Bounce>
         </div>
       </div>
     </div>
   );
 }
 
-function AboutBox( ) {
+function AboutBox() {
   const [paragraph, setParagraph] = useState(false);
-  const paragraphBtn = () =>{
+  const paragraphBtn = () => {
     setParagraph(!paragraph);
-  }
+  };
   return (
     <>
-      <div className="aboutParagraph">
-        <p>
-          Welcome to my portfolio! I'm a dedicated and enthusiastic software
-          developer with a strong foundation in creating robust and scalable
-          applications. My love for problem-solving and fascination with
-          technology have led me on an exciting journey in the world of coding.
-        </p>
-        <p>
-          With years of experience in the software development industry, I've
-          had the privilege of working on a wide range of projects, such as
-          crafting interactive web applications that power cutting-edge
-          platforms.
-          <br />
-          My expertise lies in React and Typescript , and I'm constantly
-          exploring emerging technologies to stay at the forefront of
-          innovation. I thrive in dynamic environments that challenge me to push
-          the boundaries of what's possible.
-        </p>
-        <div className={`moreP ${paragraph ? "showPara" : "hidePara"}`}>
+      <Fade>
+        <div className="aboutParagraph">
           <p>
-            Throughout this portfolio, you'll find a showcase of my latest
-            projects, highlighting my coding prowess, design sensibilities, and
-            meticulous attention to detail. Each project is a testament to my
-            commitment to delivering high-quality software solutions that meet
-            user needs and exceed expectations.
+            Welcome to my portfolio! I'm a dedicated and enthusiastic software
+            developer with a strong foundation in creating robust and scalable
+            applications. My love for problem-solving and fascination with
+            technology have led me on an exciting journey in the world of
+            coding.
           </p>
+          <p>
+            With years of experience in the software development industry, I've
+            had the privilege of working on a wide range of projects, such as
+            crafting interactive web applications that power cutting-edge
+            platforms.
+            <br />
+            My expertise lies in React and Typescript , and I'm constantly
+            exploring emerging technologies to stay at the forefront of
+            innovation. I thrive in dynamic environments that challenge me to
+            push the boundaries of what's possible.
+          </p>
+          <div className={`moreP ${paragraph ? "showPara" : "hidePara"}`}>
+            <p>
+              Throughout this portfolio, you'll find a showcase of my latest
+              projects, highlighting my coding prowess, design sensibilities,
+              and meticulous attention to detail. Each project is a testament to
+              my commitment to delivering high-quality software solutions that
+              meet user needs and exceed expectations.
+            </p>
 
-          <p>
-            Collaboration is at the heart of my work, and I relish the
-            opportunity to work with diverse teams to bring ideas to life. I
-            believe in creating elegant and maintainable code that not only
-            solves immediate challenges but also lays the foundation for future
-            growth and scalability. I'm excited to connect with fellow
-            developers, forward-thinking companies, and anyone who shares a
-            passion for leveraging technology to create meaningful and impactful
-            applications. Let's collaborate on the next big thing!
-          </p>
+            <p>
+              Collaboration is at the heart of my work, and I relish the
+              opportunity to work with diverse teams to bring ideas to life. I
+              believe in creating elegant and maintainable code that not only
+              solves immediate challenges but also lays the foundation for
+              future growth and scalability. I'm excited to connect with fellow
+              developers, forward-thinking companies, and anyone who shares a
+              passion for leveraging technology to create meaningful and
+              impactful applications. Let's collaborate on the next big thing!
+            </p>
 
-          <p>
-            Feel free to explore my projects and get in touch to discuss
-            potential opportunities or simply geek out about all things software
-            development. I'm looking forward to connecting with you!
-          </p>
+            <p>
+              Feel free to explore my projects and get in touch to discuss
+              potential opportunities or simply geek out about all things
+              software development. I'm looking forward to connecting with you!
+            </p>
+          </div>
+          <div className="btnParagraph" onClick={paragraphBtn}>
+            {paragraph ? "show less" : "show more"}
+          </div>
         </div>
-        <div className="btnParagraph" onClick={paragraphBtn}>{paragraph ? "show less" : "show more"}</div>
+      </Fade>
 
-      </div>
-
-      <Link to="/Contact" className="moreBtn">
-        <span>get in touch</span>
-      </Link>
+        <Link to="/Contact" className="moreBtn">
+          <span>get in touch</span>
+        </Link>
       <div className="devLanguage">
-        <span className="title">Languages/Frameworks</span>
-        <div className="devContainer">
-          <div className="lanContainer">
-            <span>
-              <img className="html" src={html} alt="language-icon" />
-            </span>
-            <span>html</span>
+        <Zoom>
+          <span className="title">Languages/Frameworks</span>
+          <div className="devContainer">
+            <div className="lanContainer">
+              <span>
+                <img className="html" src={html} alt="language-icon" />
+              </span>
+              <span>html</span>
+            </div>
+
+            <div className="lanContainer">
+              <span>
+                <img className="css" src={css} alt="language-icon" />
+              </span>
+              <span>css</span>
+            </div>
+
+            <div className="lanContainer">
+              <span>
+                <img className="js" src={js} alt="language-icon" />
+              </span>
+              <span>javascript</span>
+            </div>
+
+            <div className="lanContainer">
+              <span>
+                <img className="scss" src={scss} alt="language-icon" />
+              </span>
+              <span>scss</span>
+            </div>
+
+            <div className="lanContainer">
+              <span>
+                <img className="tailwind" src={tailwind} alt="language-icon" />
+              </span>
+              <span>tailwind</span>
+            </div>
+
+            <div className="lanContainer">
+              <span>
+                <img className="boostrap" src={boostrap} alt="language-icon" />
+              </span>
+              <span>boostrap</span>
+            </div>
+
+            <div className="lanContainer">
+              <span>
+                <img className="react" src={react} alt="language-icon" />
+              </span>
+              <span>react.js</span>
+            </div>
+
+            <div className="lanContainer">
+              <span>
+                <img
+                  className="typescript"
+                  src={typescript}
+                  alt="language-icon"
+                />
+              </span>
+              <span>typeScript</span>
+            </div>
+
+            <div className="lanContainer">
+              <span>
+                <img className="next" src={next} alt="language-icon" />
+              </span>
+              <span>next.js</span>
+            </div>
           </div>
-          <div className="lanContainer">
-            <span>
-              <img className="css" src={css} alt="language-icon" />
-            </span>
-            <span>css</span>
-          </div>
-          <div className="lanContainer">
-            <span>
-              <img className="js" src={js} alt="language-icon" />
-            </span>
-            <span>javascript</span>
-          </div>
-          <div className="lanContainer">
-            <span>
-              <img className="scss" src={scss} alt="language-icon" />
-            </span>
-            <span>scss</span>
-          </div>
-          <div className="lanContainer">
-            <span>
-              <img className="tailwind" src={tailwind} alt="language-icon" />
-            </span>
-            <span>tailwind</span>
-          </div>
-          <div className="lanContainer">
-            <span>
-              <img className="boostrap" src={boostrap} alt="language-icon" />
-            </span>
-            <span>boostrap</span>
-          </div>
-          <div className="lanContainer">
-            <span>
-              <img className="react" src={react} alt="language-icon" />
-            </span>
-            <span>react.js</span>
-          </div>
-          <div className="lanContainer">
-            <span>
-              <img
-                className="typescript"
-                src={typescript}
-                alt="language-icon"
-              />
-            </span>
-            <span>typeScript</span>
-          </div>
-          <div className="lanContainer">
-            <span>
-              <img className="next" src={next} alt="language-icon" />
-            </span>
-            <span>next.js</span>
-          </div>
-        </div>
+        </Zoom>
       </div>
     </>
   );

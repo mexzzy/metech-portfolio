@@ -1,6 +1,7 @@
 import "./Profile.css";
 import logo from "../images/logo.jpg";
 import React, { useState, useEffect } from "react";
+import { Fade, Bounce, Zoom, Slide } from "react-awesome-reveal";
 
 function Profile() {
   const [open, setOpen] = useState(false);
@@ -51,10 +52,14 @@ function Profile() {
       {openPic && (
         <div className="profilePicViewContainer">
           <div className="profilePicView">
-            <img src={logo} alt="logo" className="profilePicViewer" />
-            <div className="closeProfilePicV" onClick={picBtn}>
-              Close
-            </div>
+            <Fade>
+              <img src={logo} alt="logo" className="profilePicViewer" />
+            </Fade>
+            <Bounce>
+              <div className="closeProfilePicV" onClick={picBtn}>
+                Close
+              </div>
+            </Bounce>
           </div>
         </div>
       )}
@@ -66,62 +71,75 @@ function Profile() {
               title="view profile picture"
               onClick={() => setOpenPic(true)}
             >
-              <img src={logo} alt="logo" className="profilePic" />
+              <Zoom>
+                <img src={logo} alt="logo" className="profilePic" />
+              </Zoom>
             </div>
             <div className="profileValues">
-              <span className="profileName">samuel meshach</span>
-              <span className="profileJob">{jobs}</span>
+              <Fade>
+                <span className="profileName">samuel meshach</span>
+              </Fade>
+              <Bounce>
+                <span className="profileJob">{jobs}</span>
+              </Bounce>
             </div>
           </div>
           <div className="dropDownBtn">
-            <i
-              onClick={handler}
-              className={`fi fi-br-list ${open ? "color" : "colorChange"}`}
-            ></i>
+            <Bounce>
+              <i
+                onClick={handler}
+                className={`fi fi-br-list ${open ? "color" : "colorChange"}`}
+              ></i>
+            </Bounce>
           </div>
         </div>
 
         <div className={`profileHolder ${open ? "activate" : "deactivate"}`}>
           <div className="profileInfo">
-            <div className="profileInfoContainer">
-              <div className="profileInfoIcon">
-                <i className="fi fi-br-envelope"></i>
+            <Slide>
+              <div className="profileInfoContainer">
+                <div className="profileInfoIcon">
+                  <i className="fi fi-br-envelope"></i>
+                </div>
+                <span className="profileInfoContent">
+                  <div className="header">email</div>
+                  <div className="content">samuelmeshach055@gmail.com</div>
+                </span>
               </div>
-              <span className="profileInfoContent">
-                <div className="header">email</div>
-                <div className="content">samuelmeshach055@gmail.com</div>
-              </span>
-            </div>
-
-            <div className="profileInfoContainer">
-              <div className="profileInfoIcon">
-                <i className="fi fi-br-phone-flip"></i>
+            </Slide>
+            <Slide direction="right">
+              <div className="profileInfoContainer">
+                <div className="profileInfoIcon">
+                  <i className="fi fi-br-phone-flip"></i>
+                </div>
+                <span className="profileInfoContent">
+                  <div className="header">phone</div>
+                  <div className="content">(+234) 903-8201-903</div>
+                </span>
               </div>
-              <span className="profileInfoContent">
-                <div className="header">phone</div>
-                <div className="content">(+234) 903-8201-903</div>
-              </span>
-            </div>
-
-            <div className="profileInfoContainer">
-              <div className="profileInfoIcon">
-                <i className="fi fi-br-calendar-lines"></i>
+            </Slide>
+            <Slide>
+              <div className="profileInfoContainer">
+                <div className="profileInfoIcon">
+                  <i className="fi fi-br-calendar-lines"></i>
+                </div>
+                <span className="profileInfoContent">
+                  <div className="header">D.O.B</div>
+                  <div className="content">08 October, 2005.</div>
+                </span>
               </div>
-              <span className="profileInfoContent">
-                <div className="header">D.O.B</div>
-                <div className="content">08 October, 2005.</div>
-              </span>
-            </div>
-
-            <div className="profileInfoContainer">
-              <div className="profileInfoIcon">
-                <i className="fi fi-br-marker"></i>
+            </Slide>
+            <Slide direction="right">
+              <div className="profileInfoContainer">
+                <div className="profileInfoIcon">
+                  <i className="fi fi-br-marker"></i>
+                </div>
+                <span className="profileInfoContent">
+                  <div className="header">location</div>
+                  <div className="content">Lagos State, Nigeria.</div>
+                </span>
               </div>
-              <span className="profileInfoContent">
-                <div className="header">location</div>
-                <div className="content">Lagos State, Nigeria.</div>
-              </span>
-            </div>
+            </Slide>
           </div>
           <div className="footer">MeTech | Portfolio &copy; 2023 copyright</div>
         </div>
