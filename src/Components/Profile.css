@@ -139,6 +139,8 @@
   flex-direction: column;
   gap: 20px;
   padding: 20px 0;
+  overflow-x: scroll;
+  /* align-items: flex-start; */
   border-top: 1px solid var(--brc);
   border-bottom: 1px solid var(--brc);
 }
