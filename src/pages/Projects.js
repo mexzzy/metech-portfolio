@@ -1,11 +1,7 @@
 import "../CSS page/Project.css";
-import ProjectOne from "../project-pages/ProjectOne";
-import ProjectTwo from "../project-pages/ProjectTwo";
-// import ProjectThree from "../project-pages/ProjectThree";
-import ProjectFour from "../project-pages/ProjectFour";
-import ProjectFive from "../project-pages/ProjectFive";
-import ProjectSix from "../project-pages/ProjectSix";
 import { Slide, Zoom } from "react-awesome-reveal";
+import PersonalProjects from "../Components/PersonalProjects";
+import CollaborationProjects from "../Components/CollaborationProjects";
 
 export default function Projects() {
   return (
@@ -16,29 +12,13 @@ export default function Projects() {
       <div className="projectsBox">
         <span className="projectCategoryName"> personal projects</span>
         <div className="allProject">
-          <Zoom>
-            <ProjectOne />
-          </Zoom>
-          <Zoom>
-            <ProjectTwo />
-          </Zoom>
-          <Zoom>
-            <ProjectSix />
-          </Zoom>
-          {/* <Zoom>
-            <ProjectThree />
-          </Zoom> */}
+            <PersonalProjects />
         </div>
         <br />
         <br />
         <span className="projectCategoryName"> collaboration projects</span>
         <div className="allProject">
-          <Zoom>
-            <ProjectFour />
-          </Zoom>
-          <Zoom>
-            <ProjectFive />
-          </Zoom>
+            <CollaborationProjects />
         </div>
       </div>
     </div>

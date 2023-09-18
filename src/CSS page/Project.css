@@ -18,7 +18,7 @@
 .projectContainer {
   width: 250px;
   height: 250px;
-  background-color: rgb(4, 4, 4);
+  background-color: var(--project-bg);
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -28,6 +28,7 @@
   transition: 0.2s ease;
   border: 1px solid var(--brc);
   border-radius: 10px;
+  box-shadow: 1px 1px 10px 0px #1717173a;
 }
 .projectCategoryName{
   text-transform: capitalize;
@@ -43,7 +44,7 @@
 }
 .projectContainer:hover {
   scale: 1.02;
-  box-shadow: 1px 1px 10px 0px #1717173a;
+  box-shadow: 1px 1px 10px 3px #1717173a;
 }
 .projectContent {
   display: flex;
@@ -61,7 +62,7 @@
   text-transform: uppercase;
 }
 .description {
-  color: #666666cd;
+  color: var(--secondary-color);
   font-size: 15px;
 }
 .projectIcon {
@@ -76,17 +77,17 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-color: var(--emColor);
-  transition: 0.5s ease;
+  background-color: #15157adf;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid var(--brc);
   transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
-.projectIcon .icon:hover i {
-  color: var(--icon);
+.projectIcon .icon i{
+  color: #fff;
 }
+
+
 .projectIcon a {
   color: #fff;
   width: 100%;

@@ -26,7 +26,7 @@ form::before {
 .container {
   display: flex;
   flex-direction: column;
-  background-color: var(--emColor);
+  background-color: #25335c ;
   text-transform: capitalize;
   padding: 10px;
   border-radius: 5px;
@@ -37,6 +37,7 @@ form::before {
   display: flex;
   align-items: center;
   gap: 10px;
+  color: #fff;
   font-size: 15px;
 }
 .container span::after {
@@ -48,7 +49,7 @@ form::before {
   transition: 0.2s ease;
 }
 .container:hover span::after {
-  background-color: var(--icon);
+  background-color: #d3d7f4;
 }
 .container input {
   background: transparent;
@@ -58,7 +59,6 @@ form::before {
   outline: none;
   width: 100%;
   transition: 0.2s ease;
-  font-style: italic;
 }
 .container input:placeholder-shown {
   border-bottom: 1px solid rgba(255, 255, 255, 0.318);
@@ -68,12 +68,11 @@ form::before {
 }
 .container textarea {
   background-color: transparent;
-  border: 1px dashed var(--brc);
+  border: 1px dashed #fff;
   resize: none;
   color: white;
   padding: 5px;
   border-radius: 5px;
-  font-style: italic;
   width: 100%;
   outline: none;
 }

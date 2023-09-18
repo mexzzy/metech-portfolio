@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import "../CSS page/About.css";
-import ProjectOne from "../project-pages/ProjectOne";
-import ProjectTwo from "../project-pages/ProjectTwo";
 import html from "../images/html.png";
 import css from "../images/css.png";
 import scss from "../images/scss.png";
@@ -13,8 +11,37 @@ import tailwind from "../images/tailwind.jpg";
 import next from "../images/nextjs.jpg";
 import { useState } from "react";
 import { Fade, Slide, Zoom, Bounce } from "react-awesome-reveal";
+import PersonalProjects from "../Components/PersonalProjects";
 
 export default function About() {
+  const projectInfoArrayObject = [
+      {
+        projectTitle: "weather update",
+        language: ["react", "styled-components"],
+        description:
+          "Weather Update is a weather broadcast search engine for countries, states and cities.",
+        viewURL: "https://universal-weather.vercel.app/",
+        codeURL: "https://github.com/mexzzy/weather-app",
+      },
+      {
+        projectTitle: "metech portfolio",
+        language: ["react", "css"],
+        description:
+          "This website is to showcase Metech frontend skills and projects.",
+        viewURL: "/",
+        codeURL: "https://github.com/mexzzy/metech-portfolio",
+      },
+      {
+        projectTitle: "afriCash dashboard",
+        language: ["html, css", "js"],
+        description:
+          "It’s goal is to bring the dream of financial inclusion to all people across the continent.",
+        viewURL: "https://grtm-sa-2-africash.vercel.app/africash-dashboard.html",
+        codeURL: "https://github.com/mexzzy/grtm-sa-2-africash",
+      },
+    ];
+    const twoSlicedDataProps = projectInfoArrayObject.slice(0, 2)
+
   return (
     <div className="aboutMain">
       <Slide>
@@ -27,7 +54,7 @@ export default function About() {
               <span>
                 samuel meshach<i className="fi fi-ss-badge-check"></i>
               </span>
-              <p className="emphasis">SOFTWARE DEVELOPER </p>
+              <p className="emphasis" style={{color: "#fff"}}>SOFTWARE DEVELOPER </p>
             </Slide>
           </div>
         </div>
@@ -36,14 +63,41 @@ export default function About() {
         <AboutBox />
         <div className="ProjectAboutHolder">
           <Zoom>
-            <ProjectOne />
-            <ProjectTwo />
+          {twoSlicedDataProps.map((index) => (
+          <>
+            <div className="projectContainer" key={index}>
+              {/* content */}
+              <div className="projectContent">
+                <span className="projectTitle">{index.projectTitle}</span>
+                <span className="language">
+                  <span className="emphasis">{index.language[0]}</span>
+                  <span className="emphasis">{index.language[1]}</span>
+                </span>
+                <span className="description">{index.description}</span>
+              </div>
+              {/* icon */}
+              <div className="projectIcon">
+                <a href={index.viewURL} target="_blank" rel="noopener noreferrer">
+                  <span className="icon">
+                    <i className="fi fi-br-eye"></i>
+                    <span className="txt">view</span>
+                  </span>
+                </a>
+                <a href={index.codeURL} target="_blank" rel="noopener noreferrer">
+                  <span className="icon">
+                    <i className="fi fi-tr-code-branch"></i>
+                    <span className="txt">code</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </>
+        ))}
           </Zoom>
-          <Bounce>
             <Link to="/Projects" className="projectLink">
               more projects
             </Link>
-          </Bounce>
+            
         </div>
       </div>
     </div>
@@ -189,7 +243,6 @@ function AboutBox() {
           </div>
           </Bounce>
         </div>
-        {/* </Zoom> */}
       </div>
     </>
   );

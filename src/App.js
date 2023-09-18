@@ -9,28 +9,32 @@ import About from "./pages/About";
 import { Route, Routes } from "react-router-dom";
 import React from "react";
 import Page404 from "./pages/Page404";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 function App() {
   return (
-      <div className="App">
-        <div className="column">
-          <Profile />
-          <Social />
-        </div>
-        <div className="displayMain">
-          <div className="space">
-            <div></div>
-            <Nav />
-          </div>
-          <Routes>
-            <Route path="/" element={<About />}></Route>
-            <Route path="/Projects" element={<Projects />}></Route>
-            <Route path="/Resume" element={<Resume />}></Route>
-            <Route path="/Contact" element={<Contact />}></Route>
-            <Route path="*" element={<Page404 />}></Route>
-          </Routes>
-        </div>
+    <div className="App">
+      <div className="disableTheme">
+        <ThemeSwitcher />
       </div>
+      <div className="column">
+        <Profile />
+        <Social />
+      </div>
+      <div className="displayMain">
+        <div className="space">
+          <div></div>
+          <Nav />
+        </div>
+        <Routes>
+          <Route path="/" element={<About />}></Route>
+          <Route path="/Projects" element={<Projects />}></Route>
+          <Route path="/Resume" element={<Resume />}></Route>
+          <Route path="/Contact" element={<Contact />}></Route>
+          <Route path="*" element={<Page404 />}></Route>
+        </Routes>
+      </div>
+    </div>
   );
 }
 
