@@ -23,28 +23,23 @@ function Profile() {
   const projectJob = [
     {
       job: "frontend",
-      id: 1,
     },
     {
       job: "next.js",
-      id: 2,
     },
     {
       job: "react.js",
-      id: 3,
     },
     {
       job: "typeScript",
-      id: 4,
     },
     {
       job: "...",
-      id: 5,
     },
   ];
-  const jobs = projectJob.map((title) => (
-    <span className="emphasis" key={projectJob.id}>
-      {title.job}
+  const jobs = projectJob.map((index) => (
+    <span className="emphasis"  key={index}>
+      {index.job}
     </span>
   ));
   return (

@@ -113,9 +113,10 @@
   object-fit: cover;
   width: fit-content;
   font-size: 10px;
+  font-weight: 500;
   border-radius: 2px;
   border: 1px solid var(--brc);
-  color: #ccccccb1;
+  color:var(--emphasis) ;
 }
 .profileValues {
   display: flex;
@@ -140,7 +141,6 @@
   gap: 20px;
   padding: 20px 0;
   overflow-x: scroll;
-  /* align-items: flex-start; */
   border-top: 1px solid var(--brc);
   border-bottom: 1px solid var(--brc);
 }
@@ -171,7 +171,7 @@
 .profileInfoContent .header {
   text-transform: uppercase;
   font-size: 12px;
-  color: #939393;
+  color:  var(--secondary-color);
   font-weight: 500;
 }
 .profileInfoContent .content {
@@ -184,7 +184,7 @@
   display: grid;
   place-items: center;
   margin: auto;
-  color: #93939393;
+  color: var(--secondary-color);
 }
 .dropDownBtn {
   display: none;
@@ -253,11 +253,10 @@
     flex-wrap: nowrap;
   }
   .profileInfo {
-    /* border: 0; */
     padding: 20px 10px;
     width: 80%;
     height: 60vh;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--text-color-theme);
     border-radius: 20px;
     backdrop-filter: none;
     top: 50px;
@@ -270,20 +269,20 @@
     position: relative;
     top: -5px;
     display: block;
-    color: #fff;
+    color: var(--text-color);
     font-size: 20px;
     text-align: center;
     text-transform: capitalize;
   }
   .profileHolder {
-    opacity: 0;
+    /* opacity: 0; */
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
     width: 100%;
-    background-color: transparent;
-    display: flex;
+    background-color: #00000086;
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(50px);
@@ -291,14 +290,12 @@
     z-index: 5;
   }
   .activate {
-    opacity: 1;
+    display: flex;
+    /* opacity: 1; */
     transform: translateY(0);
   }
   .deactivate {
-    opacity: 0;
-    transform: translateY(-50px);
-    transition: 0.2s;
-    pointer-events: none;
+    display: none;
   }
   .footer {
     backdrop-filter: blur(20px);

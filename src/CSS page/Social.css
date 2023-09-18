@@ -7,13 +7,13 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
-  color: #abaaaa;
+  color: var( --text-color);
   border-radius: 10px;
   border: 1px solid var(--brc);
   background-color: var(--bgc);
 }
 .socialLink {
-  color: #abaaaa;
+  color: var( --text-color);
 }
 .socialMain i {
   cursor: pointer;
@@ -62,7 +62,7 @@
     bottom: 12%;
     height: auto;
     width: auto;
-    border: .5px solid #b3b3b373;
+    border: .5px solid #929292d7;
     background-color: var(--bgc);
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);

@@ -62,8 +62,7 @@
     margin: auto;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 90px;
-    background-color: rgba(0, 0, 0, 0.37);
+    background-color: rgba(3, 1, 24, 0.37);
     backdrop-filter: blur(50px);
     border-top: 1px solid var(--brc);
   }
@@ -92,7 +91,7 @@
   }
   .navLinks span {
     font-size: 10px;
-    color: #aaaaaa;
+    color: var(--secondary-color);
   }
   .icon {
     display: none;

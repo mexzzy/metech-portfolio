@@ -37,7 +37,7 @@ function Social() {
           <Bounce>
           <a
             className="socialLink"
-            href="/v"
+            href="https://www.twitter.com/metech_code/"
             target="_blank"
             rel="noopener noreferrer"
           >

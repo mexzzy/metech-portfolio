@@ -1,6 +1,7 @@
 import "./Nav.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import ThemeSwitcher from "../ThemeSwitcher";
 
 function Nav() {
   const [homeLink, setHomeLink] = useState(false);
@@ -70,6 +71,7 @@ function Nav() {
         <i className="fi fi-bs-at"></i>
         <span>contact</span>
       </Link>
+      <ThemeSwitcher/>
     </main>
   );
 }
