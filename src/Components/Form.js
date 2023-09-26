@@ -6,6 +6,7 @@ import { useState } from "react";
 const Form = () => {
 
   const [showSuccess, setShowSuccess] = useState(false);
+  const [showNotSuccess, setShowNotSuccess] = useState(false);
 
   function sendEmail(e) {
     e.preventDefault();
@@ -27,6 +28,11 @@ const Form = () => {
         },
         (error) => {
           console.error("Email could not be sent:", error.text);
+          setShowNotSuccess(true);
+          setTimeout(() => {
+            setShowNotSuccess(false);
+          }, 7000);
+        
         }
       );
   }
@@ -36,6 +42,11 @@ const Form = () => {
       {showSuccess && (
         <div className="success-message">
           Email message sent successfully!
+        </div>
+      )}
+      {showNotSuccess && (
+        <div className="errorMsg">
+          Email message not sent successfully!
         </div>
       )}
         <Slide triggerOnce>
