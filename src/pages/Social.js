@@ -27,7 +27,7 @@ function Social() {
           <Bounce triggerOnce>
           <a
             className="socialLink"
-            href="/v"
+            href="https://www.linkedin.com/in/samuel-meshach-134466283/"
             target="_blank"
             rel="noopener noreferrer"
           >
