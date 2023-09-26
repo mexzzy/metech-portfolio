@@ -11,50 +11,44 @@ import tailwind from "../images/tailwind.jpg";
 import next from "../images/nextjs.jpg";
 import { useState } from "react";
 import { Fade, Slide, Zoom, Bounce } from "react-awesome-reveal";
-import PersonalProjects from "../Components/PersonalProjects";
+// import PersonalProjects from "../Components/PersonalProjects";
 
 export default function About() {
   const projectInfoArrayObject = [
-      {
-        projectTitle: "weather update",
-        language: ["react", "styled-components"],
-        description:
-          "Weather Update is a weather broadcast search engine for countries, states and cities.",
-        viewURL: "https://universal-weather.vercel.app/",
-        codeURL: "https://github.com/mexzzy/weather-app",
-      },
-      {
-        projectTitle: "metech portfolio",
-        language: ["react", "css"],
-        description:
-          "This website is to showcase Metech frontend skills and projects.",
-        viewURL: "/",
-        codeURL: "https://github.com/mexzzy/metech-portfolio",
-      },
-      {
-        projectTitle: "afriCash dashboard",
-        language: ["html, css", "js"],
-        description:
-          "It’s goal is to bring the dream of financial inclusion to all people across the continent.",
-        viewURL: "https://grtm-sa-2-africash.vercel.app/africash-dashboard.html",
-        codeURL: "https://github.com/mexzzy/grtm-sa-2-africash",
-      },
-    ];
-    const twoSlicedDataProps = projectInfoArrayObject.slice(0, 2)
+    {
+      projectTitle: "weather update",
+      language: ["react", "styled-components"],
+      description:
+        "Weather Update is a weather broadcast search engine for countries, states and cities.",
+      viewURL: "https://universal-weather.vercel.app/",
+      codeURL: "https://github.com/mexzzy/weather-app",
+    },
+    {
+      projectTitle: "metech portfolio",
+      language: ["react", "css"],
+      description:
+        "This website is to showcase Metech frontend skills and projects.",
+      viewURL: "/",
+      codeURL: "https://github.com/mexzzy/metech-portfolio",
+    },
+  ];
+  const twoSlicedDataProps = projectInfoArrayObject.slice(0, 2);
 
   return (
     <div className="aboutMain">
-      <Slide>
+      <Slide triggerOnce>
         <span className="navTitle move">home</span>
       </Slide>
       <div className="parallax">
         <div className="namingAbout">
           <div className="nameFlex">
-            <Slide direction="up">
+            <Slide triggerOnce direction="up">
               <span>
                 samuel meshach<i className="fi fi-ss-badge-check"></i>
               </span>
-              <p className="emphasis" style={{color: "#fff"}}>SOFTWARE DEVELOPER </p>
+              <p className="emphasis" style={{ color: "#fff" }}>
+                SOFTWARE DEVELOPER{" "}
+              </p>
             </Slide>
           </div>
         </div>
@@ -62,42 +56,49 @@ export default function About() {
       <div className="aboutBox">
         <AboutBox />
         <div className="ProjectAboutHolder">
-          <Zoom>
-          {twoSlicedDataProps.map((index) => (
-          <>
-            <div className="projectContainer" key={index}>
-              {/* content */}
-              <div className="projectContent">
-                <span className="projectTitle">{index.projectTitle}</span>
-                <span className="language">
-                  <span className="emphasis">{index.language[0]}</span>
-                  <span className="emphasis">{index.language[1]}</span>
-                </span>
-                <span className="description">{index.description}</span>
-              </div>
-              {/* icon */}
-              <div className="projectIcon">
-                <a href={index.viewURL} target="_blank" rel="noopener noreferrer">
-                  <span className="icon">
-                    <i className="fi fi-br-eye"></i>
-                    <span className="txt">view</span>
-                  </span>
-                </a>
-                <a href={index.codeURL} target="_blank" rel="noopener noreferrer">
-                  <span className="icon">
-                    <i className="fi fi-tr-code-branch"></i>
-                    <span className="txt">code</span>
-                  </span>
-                </a>
-              </div>
-            </div>
-          </>
-        ))}
+          <Zoom triggerOnce>
+            {twoSlicedDataProps.map((index) => (
+              <>
+                <div className="projectContainer" key={index}>
+                  {/* content */}
+                  <div className="projectContent">
+                    <span className="projectTitle">{index.projectTitle}</span>
+                    <span className="language">
+                      <span className="emphasis">{index.language[0]}</span>
+                      <span className="emphasis">{index.language[1]}</span>
+                    </span>
+                    <span className="description">{index.description}</span>
+                  </div>
+                  {/* icon */}
+                  <div className="projectIcon">
+                    <a
+                      href={index.viewURL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="icon">
+                        <i className="fi fi-br-eye"></i>
+                        <span className="txt">view</span>
+                      </span>
+                    </a>
+                    <a
+                      href={index.codeURL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="icon">
+                        <i className="fi fi-tr-code-branch"></i>
+                        <span className="txt">code</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </>
+            ))}
           </Zoom>
-            <Link to="/Projects" className="projectLink">
-              more projects
-            </Link>
-            
+          <Link to="/Projects" className="projectLink">
+            more projects
+          </Link>
         </div>
       </div>
     </div>
@@ -109,9 +110,48 @@ function AboutBox() {
   const paragraphBtn = () => {
     setParagraph(!paragraph);
   };
+
+  const languages = [
+    {
+      langImage: ` ${html}`,
+      langName: "html",
+    },
+    {
+      langImage: ` ${css}`,
+      langName: "css",
+    },
+    {
+      langImage: ` ${js}`,
+      langName: "javascript",
+    },
+    {
+      langImage: ` ${scss}`,
+      langName: "scss",
+    },
+    {
+      langImage: ` ${tailwind}`,
+      langName: "tailwind",
+    },
+    {
+      langImage: ` ${boostrap}`,
+      langName: "boostrap",
+    },
+    {
+      langImage: ` ${react}`,
+      langName: "react.js",
+    },
+    {
+      langImage: ` ${typescript}`,
+      langName: "typescript",
+    },
+    {
+      langImage: ` ${next}`,
+      langName: "next.js",
+    },
+  ];
   return (
     <>
-      <Fade>
+      <Fade triggerOnce>
         <div className="aboutParagraph">
           <p>
             Welcome to my portfolio! I'm a dedicated and enthusiastic software
@@ -167,81 +207,18 @@ function AboutBox() {
         <span>get in touch</span>
       </Link>
       <div className="devLanguage">
-        {/* <Zoom> */}
         <span className="title">Languages/Frameworks</span>
         <div className="devContainer">
-          <Bounce>
-            <div className="lanContainer">
-              <span>
-                <img src={html} alt="language-icon" />
-              </span>
-              <span>html</span>
-            </div>
-          </Bounce>
-          <Bounce>
-          <div className="lanContainer">
-            <span>
-              <img src={css} alt="language-icon" />
-            </span>
-            <span>css</span>
-          </div>
-          </Bounce>
-<Bounce>
-          <div className="lanContainer">
-            <span>
-              <img src={js} alt="language-icon" />
-            </span>
-            <span>javascript</span>
-          </div>
-          </Bounce>
-<Bounce>
-          <div className="lanContainer">
-            <span>
-              <img src={scss} alt="language-icon" />
-            </span>
-            <span>scss</span>
-          </div>
-          </Bounce>
-<Bounce>
-          <div className="lanContainer">
-            <span>
-              <img src={tailwind} alt="language-icon" />
-            </span>
-            <span>tailwind</span>
-          </div>
-          </Bounce>
-<Bounce>
-          <div className="lanContainer">
-            <span>
-              <img src={boostrap} alt="language-icon" />
-            </span>
-            <span>boostrap</span>
-          </div>
-          </Bounce>
-          <Bounce>
-          <div className="lanContainer">
-            <span>
-              <img src={react} alt="language-icon" />
-            </span>
-            <span>react.js</span>
-          </div>
-          </Bounce>
-<Bounce>
-          <div className="lanContainer">
-            <span>
-              <img src={typescript} alt="language-icon" />
-            </span>
-            <span>typeScript</span>
-          </div>
-          </Bounce>
-          <Bounce>
-          <div className="lanContainer">
-            <span>
-              <img src={next} alt="language-icon" />
-            </span>
-            <span>next.js</span>
-          </div>
-          </Bounce>
+          {languages.map((index) => (
+            <Bounce triggerOnce>
+              <div className="lanContainer">
+                <span>
+                  <img src={index.langImage} alt="language-icon" />
+                </span>
+                <span>{index.langName}</span>
+              </div>
+            </Bounce>
+          ))}
         </div>
       </div>
     </>

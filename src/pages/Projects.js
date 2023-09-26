@@ -1,12 +1,12 @@
 import "../CSS page/Project.css";
-import { Slide, Zoom } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
 import PersonalProjects from "../Components/PersonalProjects";
 import CollaborationProjects from "../Components/CollaborationProjects";
 
 export default function Projects() {
   return (
     <div className="projectsMain">
-      <Slide>
+      <Slide triggerOnce>
         <span className="navTitle move">projects</span>
       </Slide>
       <div className="projectsBox">
