@@ -4,12 +4,13 @@ import emailjs from "emailjs-com";
 import { useState } from "react";
 
 const Form = () => {
-
   const [showSuccess, setShowSuccess] = useState(false);
   const [showNotSuccess, setShowNotSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   function sendEmail(e) {
     e.preventDefault();
+    setLoading(true);
 
     emailjs
       .sendForm(
@@ -20,7 +21,7 @@ const Form = () => {
       )
       .then(
         (result) => {
-          console.log('Email sent successfully:', result.text);
+          console.log("Email sent successfully:", result.text);
           setShowSuccess(true);
           setTimeout(() => {
             setShowSuccess(false);
@@ -32,23 +33,24 @@ const Form = () => {
           setTimeout(() => {
             setShowNotSuccess(false);
           }, 7000);
-        
         }
-      );
+      )
+      .finally(() => {
+        setLoading(false);
+      });
   }
+
   return (
     <>
       <form onSubmit={sendEmail}>
-      {showSuccess && (
-        <div className="success-message">
-          Email message sent successfully!
-        </div>
-      )}
-      {showNotSuccess && (
-        <div className="errorMsg">
-          Email message not sent successfully!
-        </div>
-      )}
+        {showSuccess && (
+          <div className="success-message">
+            Email message sent successfully!
+          </div>
+        )}
+        {showNotSuccess && (
+          <div className="errorMsg">Email message not sent successfully!</div>
+        )}
         <Slide triggerOnce>
           <div className="container">
             <span> full name</span>
@@ -91,7 +93,9 @@ const Form = () => {
         </Zoom>
         <Bounce triggerOnce>
           <div className="formBtn">
-            <button type="submit">send</button>
+            <button type="submit" disabled={loading}>
+              {loading ? "Sending..." : "Send"}
+            </button>
           </div>
         </Bounce>
       </form>
