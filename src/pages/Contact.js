@@ -6,7 +6,7 @@ import Slide from "react-awesome-reveal";
 export default function Contact() {
   return (
     <div className="contactMain">
-      <Slide>
+      <Slide triggerOnce>
         <span className="navTitle move">contact</span>
       </Slide>
       <div className="contactBox">

@@ -5,13 +5,13 @@ const Form = () => {
   return (
     <>
       <form>
-        <Slide>
+        <Slide triggerOnce>
           <div className="container">
             <span> full name</span>
             <input id="name" type="text" placeholder="-" required />
           </div>
         </Slide>
-        <Slide direction="right">
+        <Slide triggerOnce direction="right">
           <div className="formFlex">
             <div className="container">
               <span> email</span>
@@ -21,7 +21,7 @@ const Form = () => {
         </Slide>
         <br />
 
-        <Zoom>
+        <Zoom triggerOnce>
           <div className="container">
             <span>message</span>
             <textarea
@@ -33,7 +33,7 @@ const Form = () => {
             ></textarea>
           </div>
         </Zoom>
-        <Bounce>
+        <Bounce triggerOnce>
           <div className="formBtn">
             <button>send</button>
           </div>

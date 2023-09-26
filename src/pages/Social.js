@@ -11,9 +11,9 @@ function Social() {
   return (
     <>
       <main className="socialMain">
-        <Zoom>
+        <Zoom triggerOnce>
         <div className={`socialMedias ${social ? "showSocial" : "hideSocial"}`}>
-          <Bounce>
+          <Bounce triggerOnce>
           <a
             className="socialLink"
             href="https://github.com/mexzzy"
@@ -24,7 +24,7 @@ function Social() {
           </a>
           </Bounce>
 
-          <Bounce>
+          <Bounce triggerOnce>
           <a
             className="socialLink"
             href="/v"
@@ -34,7 +34,7 @@ function Social() {
             <i className="fi fi-brands-linkedin"></i>
           </a>
           </Bounce>
-          <Bounce>
+          <Bounce triggerOnce>
           <a
             className="socialLink"
             href="https://www.twitter.com/metech_code/"
@@ -44,7 +44,7 @@ function Social() {
             <i className="fi fi-brands-twitter"></i>
           </a>
           </Bounce>
-          <Bounce>
+          <Bounce triggerOnce>
           <a
             className="socialLink"
             href="https://www.instagram.com/metech_dev/"

@@ -10,10 +10,10 @@ export default function Resume() {
   };
   return (
     <div className="resumeMain">
-      <Slide>
+      <Slide triggerOnce>
         <span className="navTitle move">resum&eacute;</span>
       </Slide>
-      <Bounce>
+      <Bounce triggerOnce>
         <div className="detailIcon" onClick={detailBtn}>
           <span>More</span>
           <i className="fi fi-rr-angle-small-down" onClick={detailBtn}></i>
@@ -22,7 +22,7 @@ export default function Resume() {
       <div className="resumeBox">
         <div className="resumeContainer">
           <div className="resumeR">
-            <Bounce>
+            <Bounce triggerOnce>
               <div className="resumePicBox">
                 <div className="resumePic">
                   <img src={profilePic} alt="profilePic" />
@@ -38,7 +38,7 @@ export default function Resume() {
               <i className="fi fi-ss-user"></i>
               <span>profile</span>
             </div>
-            <Slide>
+            <Slide triggerOnce>
               <div className="resumeWriteUp">
                 <div className="words">
                   Highly motivated and detail-oriented software developer with a
@@ -55,13 +55,13 @@ export default function Resume() {
               <span>experience/employment history</span>
             </div>
             <div className="resumeWriteUp">
-              <Zoom>
+              <Zoom triggerOnce>
                 <div>
                   <div className="workTitle">weather update [project]</div>
                   <div className="workDate">august 2023 </div>
                 </div>
               </Zoom>
-              <Slide>
+              <Slide triggerOnce>
                 <div>
                   <div className="words">
                     weather update was published august 2023, it's designed to
@@ -91,7 +91,7 @@ export default function Resume() {
             </div>
             {/* work  */}
             <div className="resumeWriteUp">
-              <Zoom>
+              <Zoom triggerOnce>
                 <div>
                   <div className="workTitle">
                     frontend developer at Google, united kingdom
@@ -99,7 +99,7 @@ export default function Resume() {
                   <div className="workDate">january 2023 - march 2023</div>
                 </div>
               </Zoom>
-              <Slide>
+              <Slide triggerOnce>
                 <div>
                   <div className="words">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -133,7 +133,7 @@ export default function Resume() {
             </div>
             {/* work */}
             <div className="resumeWriteUp">
-              <Zoom>
+              <Zoom triggerOnce>
                 <div>
                   <div className="workTitle">
                     frontend developer at Google, united kingdom
@@ -142,7 +142,7 @@ export default function Resume() {
                 </div>
               </Zoom>
               <div>
-                <Slide>
+                <Slide triggerOnce>
                   <div className="words">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Commodi officia quaerat, accusantium dignissimos repellendus
@@ -175,12 +175,12 @@ export default function Resume() {
             </div>
           </div>
           <div className={`resumeL ${detail ? "showDetail" : "hideDetail"}`}>
-            <Bounce>
+            <Bounce triggerOnce>
               <div className="detailIconCancel" onClick={detailBtn}>
                 Close
               </div>
             </Bounce>
-            <Bounce>
+            <Bounce triggerOnce>
               <div className="leftContainer">
                 <div className="resumeTitle">details</div>
                 <div className="addressAndNumber">

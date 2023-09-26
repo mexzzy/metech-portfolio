@@ -47,7 +47,7 @@ function Profile() {
       {openPic && (
         <div className="profilePicViewContainer">
           <div className="profilePicView">
-            <Fade>
+            <Fade triggerOnce>
               <img src={logo} alt="logo" className="profilePicViewer" />
             </Fade>
             <Bounce>
@@ -66,21 +66,21 @@ function Profile() {
               title="view profile picture"
               onClick={() => setOpenPic(true)}
             >
-              <Zoom>
+              <Zoom triggerOnce>
                 <img src={logo} alt="logo" className="profilePic" />
               </Zoom>
             </div>
             <div className="profileValues">
-              <Fade>
+              <Fade triggerOnce>
                 <span className="profileName">samuel meshach</span>
               </Fade>
-              <Bounce>
+              <Bounce triggerOnce>
                 <span className="profileJob">{jobs}</span>
               </Bounce>
             </div>
           </div>
           <div className="dropDownBtn">
-            <Bounce>
+            <Bounce triggerOnce>
               <i
                 onClick={handler}
                 className={`fi fi-br-list ${open ? "color" : "colorChange"}`}
@@ -91,7 +91,7 @@ function Profile() {
 
         <div className={`profileHolder ${open ? "activate" : "deactivate"}`}>
           <div className="profileInfo">
-            <Slide>
+            <Slide triggerOnce>
               <div className="profileInfoContainer">
                 <div className="profileInfoIcon">
                   <i className="fi fi-br-envelope"></i>
@@ -102,7 +102,7 @@ function Profile() {
                 </span>
               </div>
             </Slide>
-            <Slide direction="right">
+            <Slide triggerOnce direction="right">
               <div className="profileInfoContainer">
                 <div className="profileInfoIcon">
                   <i className="fi fi-br-phone-flip"></i>
@@ -113,7 +113,7 @@ function Profile() {
                 </span>
               </div>
             </Slide>
-            <Slide>
+            <Slide triggerOnce>
               <div className="profileInfoContainer">
                 <div className="profileInfoIcon">
                   <i className="fi fi-br-calendar-lines"></i>
@@ -124,7 +124,7 @@ function Profile() {
                 </span>
               </div>
             </Slide>
-            <Slide direction="right">
+            <Slide triggerOnce direction="right">
               <div className="profileInfoContainer">
                 <div className="profileInfoIcon">
                   <i className="fi fi-br-marker"></i>
