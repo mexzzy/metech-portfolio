@@ -117,6 +117,11 @@ form .formBtn button:hover {
   padding: 10px;
 
 }
+.errorMsg{
+  border: 1px solid red ;
+  background-color: rgba(128, 0, 0, 0.346);
+  padding: 10px;
+}
 @media (max-width: 768px) {
   .contactBox {
     padding: 5% 20px;
