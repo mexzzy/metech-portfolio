@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import React, { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 import { Circles } from "react-loader-spinner";
-// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { Slide, Zoom, Bounce } from "react-awesome-reveal";
 import "../CSS page/Contact.css";
 
@@ -9,42 +8,38 @@ const Form = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const [showNotSuccess, setShowNotSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
+  const form = useRef();
 
   const sendEmail = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      const result = await emailjs.sendForm(
+      await emailjs.sendForm(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
         process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-        e.target,
+        form.current,
         process.env.REACT_APP_EMAILJS_USER_ID
       );
-      console.log("Email sent successfully:", result.text);
       setShowSuccess(true);
       setTimeout(() => {
         setShowSuccess(false);
-      }, 7000);
+      }, 10000);
     } catch (error) {
-      console.error("Email could not be sent:", error.text);
+      console.error("Email not be sent:", error.text);
       setShowNotSuccess(true);
       setTimeout(() => {
         setShowNotSuccess(false);
-      }, 7000);
+      }, 10000);
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <form onSubmit={sendEmail}>
-      {showSuccess && (
-        <div className="success-message">Email message sent successfully!</div>
-      )}
-      {showNotSuccess && (
-        <div className="errorMsg">Email message sending failed!</div>
-      )}
+    <form onSubmit={sendEmail} ref={form}>
+      {showSuccess && <div className="success-message">Message Delivered!</div>}
+      {showNotSuccess && <div className="errorMsg">Message not Delivered!</div>}
       <Slide triggerOnce>
         <div className="container">
           <span>Full Name</span>
@@ -82,7 +77,7 @@ const Form = () => {
         <div className="formBtn">
           <button type="submit" disabled={loading}>
             {loading ? (
-              <div className="btnFlex"> 
+              <div className="btnFlex">
                 <span>Sending... </span>
                 <Circles
                   height="20"
