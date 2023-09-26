@@ -135,3 +135,8 @@ form .formBtn button:hover {
     margin-bottom: 30%;
   }
 }
+
+.btnFlex{
+  display: flex;
+  gap: 10px;
+}
