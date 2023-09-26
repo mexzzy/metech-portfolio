@@ -90,7 +90,7 @@ export default function Resume() {
               </Slide>
             </div>
             {/* work  */}
-            <div className="resumeWriteUp">
+            {/* <div className="resumeWriteUp">
               <Zoom triggerOnce>
                 <div>
                   <div className="workTitle">
@@ -130,9 +130,9 @@ export default function Resume() {
                   </div>
                 </div>
               </Slide>
-            </div>
+            </div> */}
             {/* work */}
-            <div className="resumeWriteUp">
+            {/* <div className="resumeWriteUp">
               <Zoom triggerOnce>
                 <div>
                   <div className="workTitle">
@@ -172,7 +172,7 @@ export default function Resume() {
                   </div>
                 </Slide>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className={`resumeL ${detail ? "showDetail" : "hideDetail"}`}>
             <Bounce triggerOnce>
