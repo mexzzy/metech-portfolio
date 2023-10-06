@@ -10,6 +10,14 @@ export default function PersonalProjects() {
         codeURL: "https://github.com/mexzzy/weather-app",
       },
       {
+        projectTitle: "WebTextEditor",
+        language: ["react", "css"],
+        description:
+          "webTextEditor: highlight, customize and save.",
+        viewURL: "https://web-text-editor.vercel.app",
+        codeURL: "https://github.com/mexzzy/WebTextEditor",
+      },
+      {
         projectTitle: "metech portfolio",
         language: ["react", "css"],
         description:
