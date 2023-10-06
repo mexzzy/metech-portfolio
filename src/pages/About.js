@@ -24,12 +24,11 @@ export default function About() {
       codeURL: "https://github.com/mexzzy/weather-app",
     },
     {
-      projectTitle: "metech portfolio",
+      projectTitle: "WebTextEditor",
       language: ["react", "css"],
-      description:
-        "This website is to showcase Metech frontend skills and projects.",
-      viewURL: "/",
-      codeURL: "https://github.com/mexzzy/metech-portfolio",
+      description: "webTextEditor: highlight, customize and save.",
+      viewURL: "https://web-text-editor.vercel.app",
+      codeURL: "https://github.com/mexzzy/WebTextEditor",
     },
   ];
   const twoSlicedDataProps = projectInfoArrayObject.slice(0, 2);

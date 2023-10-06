@@ -117,13 +117,18 @@ form .formBtn button:hover {
 .success-message{
   border: 1px solid green ;
   background-color: rgba(0, 128, 0, 0.346);
-  padding: 10px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
 }
 .errorMsg{
   border: 1px solid red ;
   background-color: rgba(128, 0, 0, 0.346);
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
 }
 @media (max-width: 768px) {
   .contactBox {
