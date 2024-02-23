@@ -6,8 +6,6 @@
   padding: 0 15px;
   overflow-wrap: break-word;
 }
-/*  */
-
 .allProject {
   margin-top: 10px;
   display: flex;
@@ -77,19 +75,22 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-color: #15157adf;
+  background-color: var(--icon);
   padding: 10px;
   border-radius: 5px;
   border: 1px solid var(--brc);
   transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 100%;
 }
 .projectIcon .icon i{
   color: #fff;
 }
 
-
 .projectIcon a {
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 .projectIcon i {

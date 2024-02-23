@@ -1,4 +1,4 @@
-import "../CSS page/Contact.css";
+import "../styles/Contact.css";
 import React from "react";
 import Form from "../Components/Form";
 import Slide from "react-awesome-reveal";

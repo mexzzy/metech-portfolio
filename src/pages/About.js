@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../CSS page/About.css";
+import "../styles/About.css";
 import html from "../images/html.png";
 import css from "../images/css.png";
 import scss from "../images/scss.png";
@@ -9,9 +9,8 @@ import typescript from "../images/typescript.png";
 import boostrap from "../images/Bootstrap.png";
 import tailwind from "../images/tailwind.jpg";
 import next from "../images/nextjs.jpg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Fade, Slide, Zoom, Bounce } from "react-awesome-reveal";
-// import PersonalProjects from "../Components/PersonalProjects";
 
 export default function About() {
   const projectInfoArrayObject = [
@@ -45,8 +44,8 @@ export default function About() {
               <span>
                 samuel meshach<i className="fi fi-ss-badge-check"></i>
               </span>
-              <p className="emphasis" style={{ color: "#fff" }}>
-                SOFTWARE DEVELOPER{" "}
+              <p className="emphasis" style={{ color: "#ffffff" }}>
+                SOFTWARE DEVELOPER
               </p>
             </Slide>
           </div>
@@ -120,12 +119,12 @@ function AboutBox() {
       langName: "css",
     },
     {
-      langImage: ` ${js}`,
-      langName: "javascript",
-    },
-    {
       langImage: ` ${scss}`,
       langName: "scss",
+    },
+    {
+      langImage: ` ${js}`,
+      langName: "javascript",
     },
     {
       langImage: ` ${tailwind}`,
@@ -148,6 +147,7 @@ function AboutBox() {
       langName: "next.js",
     },
   ];
+
   return (
     <>
       <Fade triggerOnce>
@@ -207,9 +207,11 @@ function AboutBox() {
       </Link>
       <div className="devLanguage">
         <span className="title">Languages/Frameworks</span>
-        <div className="devContainer">
+        <div
+          className="devContainer"
+        >
           {languages.map((index) => (
-            <Bounce triggerOnce>
+            <Bounce key={index} triggerOnce>
               <div className="lanContainer">
                 <span>
                   <img src={index.langImage} alt="language-icon" />
@@ -219,6 +221,10 @@ function AboutBox() {
             </Bounce>
           ))}
         </div>
+      </div>
+      <br />
+      <div className="devLanguage">
+        <span className="title">Projects</span>
       </div>
     </>
   );

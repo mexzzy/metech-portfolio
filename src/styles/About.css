@@ -31,7 +31,7 @@
   display: flex;
   margin-top: 80px;
   flex-direction: column;
-  color: #fff
+  color: #fff;
 }
 .namingAbout i {
   color: royalblue;
@@ -72,7 +72,7 @@
   background-color: var(--icon);
 }
 .moreBtn:hover {
- opacity: 0.8;
+  opacity: 0.8;
 }
 .devLanguage {
   display: flex;
@@ -81,6 +81,10 @@
   flex-direction: column;
   margin-top: 10px;
   gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--brc);
 }
 .devLanguage .title {
   font-weight: 500;
@@ -106,10 +110,12 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px;
   font-size: 14px;
   border: 1px solid var(--brc);
+  width: 100%;
+  background-color: var(--project-bg);
 }
 .devLanguage .lanContainer img {
   width: 40px;
@@ -140,11 +146,18 @@
     flex-direction: column;
     justify-content: center;
   }
-  .devLanguage .lanContainer {
-    justify-content: center;
+  .devLanguage {
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 100%;
   }
-
+  .devLanguage .lanContainer {
+    justify-content: center;
+    min-width: 100%;
+  }
+  .devContainer {
+    justify-content: flex-start;
+  }
   .aboutBox {
     padding: 20px;
     margin-bottom: 5%;

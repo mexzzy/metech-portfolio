@@ -38,7 +38,7 @@ function Profile() {
     },
   ];
   const jobs = projectJob.map((index) => (
-    <span className="emphasis"  key={index}>
+    <span className="emphasis" key={index}>
       {index.job}
     </span>
   ));

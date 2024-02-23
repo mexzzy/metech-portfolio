@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../CSS page/Social.css";
+import "../styles/Social.css";
 import Bounce, { Zoom } from "react-awesome-reveal";
 
 function Social() {

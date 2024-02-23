@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../CSS page/Resume.css";
+import "../styles/Resume.css";
 import profilePic from "../images/logo.jpg";
 import { Slide, Bounce, Zoom } from "react-awesome-reveal";
 

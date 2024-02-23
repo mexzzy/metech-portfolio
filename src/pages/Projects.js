@@ -1,4 +1,4 @@
-import "../CSS page/Project.css";
+import "../styles/Project.css";
 import { Slide } from "react-awesome-reveal";
 import PersonalProjects from "../Components/PersonalProjects";
 import CollaborationProjects from "../Components/CollaborationProjects";

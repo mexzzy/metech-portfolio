@@ -1,6 +1,6 @@
 import { useForm, ValidationError } from "@formspree/react";
 import { Slide, Zoom, Bounce } from "react-awesome-reveal";
-import "../CSS page/Contact.css";
+import "../styles/Contact.css";
 
 const Form = () => {
   const [state, handleSubmit] = useForm("xoqzradw");

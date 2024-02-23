@@ -1,17 +1,17 @@
 :root {
-  --bgc-Dark: #0c1c3227;
-  --bgc-Light: #ffffffde;
+  --bgc-Dark: #0f0f0f;
+  --bgc-Light: #EEEEEE;
   --color-Light: #000;
   --color-Dark: #fff;
   --color-secondary-Light: #0f0f0faf;
   --color-secondary-Dark: #939393;
   --emphasis-Light: #000;
   --emphasis-Dark: #ccccccb1;
-  --project-bg-Light: transparent;
+  --project-bg-Light: #fff;
   --project-bg-Dark: rgb(4, 4, 4);
   --brc: #33333360;
   --icon: #102460;
-  --emColor: #07077f30;
+  --emColor: #c5cae93c;
   --theme-icon-light: #000;
   --theme-icon-dark: #fff;
 }
