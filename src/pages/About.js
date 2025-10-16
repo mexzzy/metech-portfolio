@@ -15,19 +15,23 @@ import { Fade, Slide, Zoom, Bounce } from "react-awesome-reveal";
 export default function About() {
   const projectInfoArrayObject = [
     {
-      projectTitle: "weather update",
-      language: ["react", "styled-components"],
+      projectTitle: "emergfunds",
+      language: [
+        "Next.js, Tailwind",
+        "typescript",
+        "Solana wallets",
+        "ShadCN UI",
+      ],
       description:
-        "Weather Update is a weather broadcast search engine for countries, states and cities.",
-      viewURL: "https://universal-weather.vercel.app/",
-      codeURL: "https://github.com/mexzzy/weather-app",
+        "A decentralized fundraising platform on Solana blockchain enabling secure crypto donations and transparent fund distribution for emergency relief initiatives.",
+      viewURL: "https://www.emergfunds.org/",
     },
     {
-      projectTitle: "WebTextEditor",
-      language: ["react", "css"],
-      description: "webTextEditor: highlight, customize and save.",
-      viewURL: "https://web-text-editor.vercel.app",
-      codeURL: "https://github.com/mexzzy/WebTextEditor",
+      projectTitle: "the carplug",
+      language: ["Next.js, Tailwind", "typescript", "ShadCN UI", "magic ui"],
+      description:
+        "Nigeria's premier automotive marketplace connecting car buyers with verified sellers, featuring vehicle listings, financing options, and dealership services.",
+      viewURL: "https://www.thecarplug.ng/",
     },
   ];
   const twoSlicedDataProps = projectInfoArrayObject.slice(0, 2);
@@ -55,22 +59,25 @@ export default function About() {
         <AboutBox />
         <div className="ProjectAboutHolder">
           <Zoom triggerOnce>
-            {twoSlicedDataProps.map((index) => (
+            {twoSlicedDataProps.map((project, index) => (
               <>
                 <div className="projectContainer" key={index}>
                   {/* content */}
                   <div className="projectContent">
-                    <span className="projectTitle">{index.projectTitle}</span>
+                    <span className="projectTitle">{project.projectTitle}</span>
                     <span className="language">
-                      <span className="emphasis">{index.language[0]}</span>
-                      <span className="emphasis">{index.language[1]}</span>
+                      {project.language.map((lang, langIndex) => (
+                        <span key={langIndex} className="emphasis">
+                          {lang}
+                        </span>
+                      ))}
                     </span>
-                    <span className="description">{index.description}</span>
+                    <span className="description">{project.description}</span>
                   </div>
                   {/* icon */}
                   <div className="projectIcon">
                     <a
-                      href={index.viewURL}
+                      href={project.viewURL}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -79,16 +86,7 @@ export default function About() {
                         <span className="txt">view</span>
                       </span>
                     </a>
-                    <a
-                      href={index.codeURL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span className="icon">
-                        <i className="fi fi-tr-code-branch"></i>
-                        <span className="txt">code</span>
-                      </span>
-                    </a>
+                    
                   </div>
                 </div>
               </>
@@ -207,9 +205,7 @@ function AboutBox() {
       </Link>
       <div className="devLanguage">
         <span className="title">Languages/Frameworks</span>
-        <div
-          className="devContainer"
-        >
+        <div className="devContainer">
           {languages.map((index) => (
             <Bounce key={index} triggerOnce>
               <div className="lanContainer">
