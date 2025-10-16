@@ -12,13 +12,13 @@ export default function Projects() {
       <div className="projectsBox">
         <span className="projectCategoryName"> personal projects</span>
         <div className="allProject">
-            <PersonalProjects />
+          <PersonalProjects />
         </div>
         <br />
         <br />
         <span className="projectCategoryName"> collaboration projects</span>
         <div className="allProject">
-            <CollaborationProjects />
+          <CollaborationProjects />
         </div>
       </div>
     </div>
