@@ -103,18 +103,6 @@ export default function Resume() {
         "Greatly enhanced skills and expertise in web development field",
       ],
     },
-    {
-      title: "Weather Update [Project]",
-      date: "AUGUST 2023",
-      description:
-        "Weather application project designed to display current weather updates:",
-      bulletPoints: [
-        "Created using create-react-app, styled with styled-components",
-        "Openweather API was used to fetch all country current weather data",
-        "ipinfo API was used to fetch user current location to display current weather broadcast",
-        "Libraries such as react-icons, react-spinner, react-toastify, react-feather, styled-components, axios",
-      ],
-    },
   ];
 
   return (
