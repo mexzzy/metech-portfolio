@@ -45,7 +45,7 @@ export default function About() {
                 samuel meshach<i className="fi fi-ss-badge-check"></i>
               </span>
               <p className="emphasis" style={{ color: "#ffffff" }}>
-                SOFTWARE DEVELOPER
+                FRONTEND ENGINEER
               </p>
             </Slide>
           </div>
